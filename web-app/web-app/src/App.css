@@ -1,0 +1,140 @@
+* {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    --main-bg-color: rgb(56, 15, 102);
+    --content-box-bg-color: rgb(86, 16, 165);
+    --trigger-btn-dropdown-hover: rgba(134, 110, 241, 0.2)
+}
+
+nav {
+    width: auto;
+    height: 3vh;
+    display: flex;
+    background: var(--main-bg-color);
+    align-items: center;
+    padding: 12px;
+}
+
+#header_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header_icon img {
+    width: 1.5vw;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 19px;
+}
+
+.filename-rootfolder-editor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 1vh;
+    padding: 20px;
+    padding-left: 20px;
+}
+
+.filename-rootfolder-editor-p {
+    padding: 9px;
+    font-size: 15px;
+    color: white;
+    font-size: 15px;
+}
+
+.sidebar {
+    display: table;
+    align-items: center;
+    /* flex-direction: column; */
+    background-color: var(--main-bg-color);
+    width: 60px;
+    height: 92vh;
+}
+
+.sidebar_icons_look {
+    margin: 20px;
+    font-weight: lighter;
+}
+
+.sidebar_icons_look:hover {
+    margin: 20px;
+    font-weight: 900;
+    border-left: 2px solid white;
+}
+
+
+.sidebar-icons {
+    /* float: inline-start; */
+    align-items: center;
+    width: 60px;
+    height: 92vh;
+    background-color: var(--main-bg-color);
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.sidebar-menu {
+    display: none;
+    border-left: 2px solid whitesmoke;
+    height: 2vh;
+    width: 20vw;
+    background: var(--main-bg-color);
+}
+
+#file_explorer {
+    z-index: 50;
+    display: flex;
+}
+
+.editor-wrapper {
+    display: flex;
+    float: left;
+}
+
+.dropdown-trigger-btn{
+    border-radius: 3px;
+    width: 80px;
+    height: 45px;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: var(--main-bg-color);
+    margin-left: 10px;
+}
+
+.dropdown-trigger-btn:hover{
+    background-color: var(--trigger-btn-dropdown-hover);
+
+}
+
+.dropdown-content a{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--main-bg-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px var(--content-box-bg-color);
+    padding: 12px 16px;
+    z-index: 1;
+
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
