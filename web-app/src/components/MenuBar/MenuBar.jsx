@@ -20,6 +20,9 @@ function MenuBar() {
                 <a href="#">New Tab</a><br />
                 <hr className='dropdowncontent-hr'/>
                 <a href="#">Open File</a><br />
+                <a href="#">Open Folder</a><br />
+                <a href="#">Open Recent</a><br />
+
               </div>
             </div>
             <div className="dropdown">
