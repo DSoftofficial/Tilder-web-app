@@ -56,8 +56,8 @@ nav {
     align-items: center;
     /* flex-direction: column; */
     background-color: var(--main-bg-color);
-    width: 58px;
-    height: 92vh;
+    width: 52px;
+    height: 96vh;
 }
 
 .sidebar_icons_look {
