@@ -1,5 +1,5 @@
 # Tilder in Web App
-Tiler is a light weight code editor that helps as to code efficiently & swiftly. It has powerful efficent features and tools that delivers you with your powerful code. It supports 100+ language & uses Monaco-editor
+Tilder in web app is a light weight code editor that helps as to code efficiently & swiftly in a 360° world. It has powerful efficent features and tools that delivers you with your powerful code. It supports 100+ language & uses Monaco-editor. 
 
 **Languages**
 ---
