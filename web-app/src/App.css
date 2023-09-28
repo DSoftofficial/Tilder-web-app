@@ -133,6 +133,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    border-radius: 4px;
 }
 
 .reviewbarwrapper{
