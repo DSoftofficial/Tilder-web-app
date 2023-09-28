@@ -6,8 +6,8 @@ function MonacoEditor() {
         <>
             <div className="editor-wrapper">
                 <Editor
-                    height="96vh"
-                    width="96vw"
+                    height="82vh"
+                    width="88vw"
                     theme='vs-dark'
                     defaultLanguage='html'
                     options={{ minimap: { enabled: false }, wordWrapColumn: 80 }}
