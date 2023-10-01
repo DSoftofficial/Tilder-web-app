@@ -14,10 +14,11 @@ body {
 
 nav {
     width: auto;
-    height: 3vh;
+    height: 4vh;
     display: flex;
     background: var(--main-bg-color);
     align-items: center;
+    /* justify-content: center; */
     padding: 12px;
     border-radius: 12px;
     margin: 5px;
@@ -121,19 +122,20 @@ nav {
 }
 
 .sidebar {
+    color: white;
     display: flex;
     flex-direction: column;
     background-color: var(--main-bg-color);
     height: 90vh;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
+    align-items: center;
 }
 
 .editor-wrapper{
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    border-radius: 4px;
 }
 
 .reviewbarwrapper{
@@ -154,4 +156,13 @@ nav {
     grid-template-columns: 3.125vw auto 3.125vw;
     grid-column-gap: 2.5vw;
     height: 2v;
+}
+
+.sidebaricons{
+    /* color: white; */
+    display: flex;
+    width: 3vw;
+    height: 8vh;
+    align-items: center;
+    justify-content: center;
 }
