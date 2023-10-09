@@ -187,8 +187,8 @@ nav {
     visibility: hidden;
 }
 
-.area_statusBarWrapper {
-    margin-top: 2vh;
+.areastatusBarWrapper {
+    margin-top: 0.5vh;
     display: flex;
     width: auto;
     height: 3.4vh;
