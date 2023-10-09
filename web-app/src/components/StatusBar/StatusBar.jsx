@@ -2,8 +2,8 @@ import React from 'react'
 
 const StatusBar = () => {
   return (
-    <div>
-      
+    <div id="area_statusBarWrapper">
+      <div className="statusBarWrapper"></div>
     </div>
   )
 }

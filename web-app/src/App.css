@@ -6,6 +6,7 @@
     --content-box-bg-color: rgb(20, 1, 39);
     --trigger-btn-dropdown-hover: rgba(72, 48, 177, 0.575);
     --body-main-bg-color: rgb(10, 4, 17);
+    --sidebar-icons-hover: rgb(46, 5, 87);
 }
 
 body {
@@ -62,11 +63,6 @@ nav {
 #file_explorer {
     z-index: 50;
     display: flex;
-}
-
-.editor-wrapper {
-    display: flex;
-    float: left;
 }
 
 .dropdown-trigger-btn {
@@ -132,22 +128,22 @@ nav {
     align-items: center;
 }
 
-.editor-wrapper{
+.editor-wrapper {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
 }
 
-.reviewbarwrapper{
+.reviewbarwrapper {
     display: flex;
     flex-direction: column;
     background-color: var(--main-bg-color);
     height: 90vh;
     border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;  
+    border-bottom-left-radius: 6px;
 }
 
-.mainsect{
+.mainsect {
     /* align-items: center;
     justify-content: center; */
     display: grid;
@@ -158,11 +154,54 @@ nav {
     height: 2v;
 }
 
-.sidebaricons{
-    /* color: white; */
+.iconWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.iconWrapper:hover {
+    background-color: var(--sidebar-icons-hover);
+    transition: .5s;
+}
+
+.iconWrapper:hover .sidebarIconBar {
+    visibility: visible;
+}
+
+.sidebaricons {
+    float: right;
     display: flex;
     width: 3vw;
     height: 8vh;
     align-items: center;
     justify-content: center;
+}
+
+.sidebarIconBar {
+    float: right;
+    background-color: whitesmoke;
+    width: 2px;
+    height: 2pc;
+    visibility: hidden;
+}
+
+.area_statusBarWrapper {
+    margin-top: 2vh;
+    display: flex;
+    width: auto;
+    height: 3.4vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.statusBarWrapper {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    width: 98vw;
+    height: 3.4vh;
+    background-color: var(--main-bg-color);
 }
