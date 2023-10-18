@@ -8,7 +8,6 @@ export default function SideBar() {
           <div className="fileexplorer sidebaricons"><i className="fa-regular fa-file fa-xl"></i></div>
           <span className="sidebarIconBar"></span>
         </div>
-
         <div className="iconWrapper">
           <div className="search sidebaricons"><i className="fa-solid fa-magnifying-glass fa-xl"></i></div>
           <span className="sidebarIconBar"></span>
@@ -38,7 +37,6 @@ export default function SideBar() {
           <div className="extensions sidebaricons"><i className="fa-solid fa-puzzle-piece fa-xl"></i></div>
           <span className="sidebarIconBar"></span>
         </div>
-
       </div>
     </>
   )

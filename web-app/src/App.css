@@ -6,7 +6,7 @@
     --content-box-bg-color: rgb(20, 1, 39);
     --trigger-btn-dropdown-hover: rgba(72, 48, 177, 0.575);
     --body-main-bg-color: rgb(10, 4, 17);
-    --sidebar-icons-hover: rgb(46, 5, 87);
+    --sidebar-icons-hover: rgb(46, 5, 90);
 }
 
 body {
@@ -19,7 +19,6 @@ nav {
     display: flex;
     background: var(--main-bg-color);
     align-items: center;
-    /* justify-content: center; */
     padding: 12px;
     border-radius: 12px;
     margin: 5px;
@@ -40,29 +39,6 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 0 19px;
-}
-
-.filename-rootfolder-editor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    height: 1vh;
-    padding: 20px;
-    padding-left: 20px;
-}
-
-.filename-rootfolder-editor-p {
-    padding: 9px;
-    font-size: 15px;
-    color: white;
-    font-size: 15px;
-}
-
-
-#file_explorer {
-    z-index: 50;
-    display: flex;
 }
 
 .dropdown-trigger-btn {
@@ -87,15 +63,17 @@ nav {
 
 .dropdown-content {
     display: none;
-    margin-top: 0.3em;
+    margin-top: 4px;
     position: absolute;
     background-color: var(--content-box-bg-color);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgb(53, 53, 53);
-    padding: 12px 16px;
-    z-index: 1;
-    border-radius: 5px;
-
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-top: 1.8px;
+    border-radius: 6px;
+    z-index: 2;
 }
 
 .dropdowncontent-hr {
@@ -117,12 +95,33 @@ nav {
     display: block;
 }
 
+.codewrpr{
+    display: grid;
+    grid-column-gap: 2.5vw;
+    color: aqua;
+    grid-template-columns: 3.125vw 70vw;
+}
+
+.SideBarmainwrper{
+    display: grid;
+    grid-template-columns: 20vw 3.5vw;
+    gap: 2px;
+}
+
+.mainsect{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 90vh;
+}
+
 .sidebar {
     color: white;
     display: flex;
     flex-direction: column;
     background-color: var(--main-bg-color);
     height: 90vh;
+    width: 3.5vw;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
     align-items: center;
@@ -132,6 +131,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    float: left;
 }
 
 .reviewbarwrapper {
@@ -143,22 +143,10 @@ nav {
     border-bottom-left-radius: 6px;
 }
 
-.mainsect {
-    /* align-items: center;
-    justify-content: center; */
-    display: grid;
-    width: auto;
-    color: aqua;
-    grid-template-columns: 3.125vw auto 3.125vw;
-    grid-column-gap: 2.5vw;
-    height: 2v;
-}
-
 .iconWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .iconWrapper:hover {
@@ -188,20 +176,29 @@ nav {
 }
 
 .areastatusBarWrapper {
-    margin-top: 0.5vh;
+    margin-top: 0.6vh;
     display: flex;
     width: auto;
-    height: 3.4vh;
+    height: 3vh;
     justify-content: center;
     align-items: center;
 }
 
 .statusBarWrapper {
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
     width: 98vw;
-    height: 3.4vh;
+    height: 3vh;
     background-color: var(--main-bg-color);
 }
+
+.explorerwrapper{
+    display: flex;
+    width: 20vw;
+    height: 90vh;
+    background-color: var(--main-bg-color);
+    color: white;
+}
+
