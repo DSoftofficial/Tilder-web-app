@@ -66,7 +66,7 @@ nav {
     margin-top: 4px;
     position: absolute;
     background-color: var(--content-box-bg-color);
-    min-width: 160px;
+    width: 21vw;
     box-shadow: 0px 8px 16px 0px rgb(53, 53, 53);
     padding-left: 12px;
     padding-right: 12px;
@@ -97,15 +97,15 @@ nav {
 
 .codewrpr{
     display: grid;
-    grid-column-gap: 2.5vw;
-    color: aqua;
-    grid-template-columns: 3.125vw 70vw;
+    grid-column-gap: 1vw;
+    grid-template-columns: auto auto;
 }
 
 .SideBarmainwrper{
     display: grid;
     grid-template-columns: 20vw 3.5vw;
     gap: 2px;
+    /* justify-content: space-between; */
 }
 
 .mainsect{
@@ -129,15 +129,24 @@ nav {
 
 .editor-wrapper {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    float: left;
+    justify-content: space-between;
+}
+
+.tabswrapper{
+    width: auto;
+    height: 7vh;
+}
+
+.maincodearea{
+    display: flex;
+    flex-direction: column;
 }
 
 .reviewbarwrapper {
     display: flex;
     flex-direction: column;
     background-color: var(--main-bg-color);
+    width: 3vw;
     height: 90vh;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
@@ -194,11 +203,19 @@ nav {
     background-color: var(--main-bg-color);
 }
 
-.explorerwrapper{
-    display: flex;
+.filepioneer{
+    display: none;
     width: 20vw;
     height: 90vh;
     background-color: var(--main-bg-color);
     color: white;
 }
 
+#sidebariconsi {
+    float: right;
+    display: flex;
+    width: 3vw;
+    height: 8vh;
+    align-items: center;
+    justify-content: center;
+}

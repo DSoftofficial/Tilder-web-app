@@ -1,9 +1,8 @@
 import React from 'react'
-// import './Explorer.js'
 
 export default function Explorer() {
     return (
-        <div className="explorerwrapper">
+        <div className="filepioneer">
             <h6>File Pioneer</h6>
         </div>
     )

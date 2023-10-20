@@ -6,7 +6,7 @@ function MonacoEditor() {
         <>
             <div className="editor-wrapper">
                 <Editor
-                    height="82vh"
+                    height="83vh"
                     width="20vw"//70vw
                     theme='vs-dark'
                     defaultLanguage='html'

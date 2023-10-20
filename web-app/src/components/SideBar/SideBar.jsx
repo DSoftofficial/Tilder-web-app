@@ -5,7 +5,7 @@ export default function SideBar() {
     <>
       <div className="sidebar">
         <div className="iconWrapper">
-          <div className="fileexplorer sidebaricons"><i className="fa-regular fa-file fa-xl"></i></div>
+          <div id="sidebariconsi" onClick="toggleFilePioneer()"><i className="fa-regular fa-file fa-xl"></i></div>
           <span className="sidebarIconBar"></span>
         </div>
         <div className="iconWrapper">
