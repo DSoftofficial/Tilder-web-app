@@ -24,24 +24,27 @@ function MenuBar(props) {
                 <span className='dropdown-trigger-btn'>{props.file}</span>
               </div>
               <div className="dropdown-content">
-                <li>New File</li>
-                <li>New Folder</li>
-                <li>New Window</li>
-                <li>New Tab</li>
+                <li aria-label='New File (Ctrl + N)'>New File</li>
+                <li aria-label=''>New Folder</li>
+                <li aria-label=''>New Window</li>
+                <li aria-label=''>New Tab</li>
                 <hr className='dropdowncontent-hr' />
-                <li onClick={filePicker}>Open File</li>
-                <li>Open Folder</li>
-                <li>Open Recent</li>
+                <li onClick={filePicker} aria-label=''>Open File</li>
+                <li aria-label=''>Open Folder</li>
+                <li aria-label=''>Open Recent</li>
+                <div className="subdropdown-content">
+                  <li>Recent</li>
+                </div>
                 <hr className='dropdowncontent-hr' />
-                <li>Edit</li>
-                <li>Edit recent file</li>
-                <li>Edit file temporarily</li>
+                <li aria-label=''>Edit</li>
+                <li aria-label=''>Edit recent file</li>
+                <li aria-label=''>Edit file temporarily</li>
                 <hr className='dropdowncontent-hr' />
-                <li>Save</li>
-                <li>Save as</li>
-                <li>Change Save's root directory</li>
+                <li aria-label=''>Save</li>
+                <li aria-label=''>Save as</li>
+                <li aria-label=''>Change Save's root directory</li>
                 <hr className='dropdowncontent-hr' />
-                <li onClick={quit}>Quit Editor</li>
+                <li onClick={quit} aria-label=''>Quit Editor</li>
               </div>
             </div>
             <div className="dropdown">
