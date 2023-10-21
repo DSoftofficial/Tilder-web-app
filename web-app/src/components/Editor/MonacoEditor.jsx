@@ -1,15 +1,14 @@
 import React from 'react'
 import { Editor } from '@monaco-editor/react';
 
-function MonacoEditor() {
+function MonacoEditor(props) {
     return (
         <>
-            <div className="editor-wrapper">
+            <div id="editorwrapper">
                 <Editor
                     height="83vh"
-                    width="20vw"//70vw
                     theme='vs-dark'
-                    defaultLanguage='html'
+                    defaultLanguage='python'
                     options={{ minimap: { enabled: false }, wordWrapColumn: 80 }}
                     path='fileName'
                 />

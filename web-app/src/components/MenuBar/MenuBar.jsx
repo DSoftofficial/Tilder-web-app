@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
 
 function MenuBar(props) {
+  const filePicker = () => {
+    let input = document.createElement('input');
+    input.type = 'file';
+    input.click();
+  }
+  const quit = () => {
+    window.close()
+  }
   return (
     <>
       <header>
@@ -16,26 +24,24 @@ function MenuBar(props) {
                 <span className='dropdown-trigger-btn'>{props.file}</span>
               </div>
               <div className="dropdown-content">
-                <a href="#">New File</a><br />
-                <a href="#">New Folder</a><br />
-                <a href="#">New Window</a><br />
-                <a href="#">New Tab</a><br />
+                <li>New File</li>
+                <li>New Folder</li>
+                <li>New Window</li>
+                <li>New Tab</li>
                 <hr className='dropdowncontent-hr' />
-                <a href="#">Open File</a><br />
-                <a href="#">Open Folder</a><br />
-                <a href="#">Open Recent</a><br />
+                <li onClick={filePicker}>Open File</li>
+                <li>Open Folder</li>
+                <li>Open Recent</li>
                 <hr className='dropdowncontent-hr' />
-                <a href="#">Edit</a><br />
-                <a href="#">Edit recent file</a><br />
-                <a href="#">Edit file temporarily</a><br />
+                <li>Edit</li>
+                <li>Edit recent file</li>
+                <li>Edit file temporarily</li>
                 <hr className='dropdowncontent-hr' />
-                <a href="#">Save</a><br />
-                <a href="#">Save as</a><br />
-                <a href="#">Change Save's root directory</a><br />
+                <li>Save</li>
+                <li>Save as</li>
+                <li>Change Save's root directory</li>
                 <hr className='dropdowncontent-hr' />
-                <a onClick={window.close()}>Quit Editor</a><br />
-
-
+                <li onClick={quit}>Quit Editor</li>
               </div>
             </div>
             <div className="dropdown">
@@ -43,7 +49,7 @@ function MenuBar(props) {
                 <span className='dropdown-trigger-btn'>{props.edit}</span>
               </div>
               <div className="dropdown-content">
-                <a href="/">New File</a><br />
+                <li>New File</li>
               </div>
             </div>
             <div className="dropdown">
@@ -51,7 +57,7 @@ function MenuBar(props) {
                 <span className='dropdown-trigger-btn'>{props.view}</span>
               </div>
               <div className="dropdown-content">
-                <a href="/">New File</a><br />
+                <li>New File</li>
               </div>
             </div>
             <div className="dropdown">
@@ -59,7 +65,7 @@ function MenuBar(props) {
                 <span className='dropdown-trigger-btn'>{props.go}</span>
               </div>
               <div className="dropdown-content">
-                <a href="/">New File</a><br />
+                <li>New File</li>
               </div>
             </div>
             <div className="dropdown">
@@ -67,7 +73,7 @@ function MenuBar(props) {
                 <span className='dropdown-trigger-btn'>{props.run}</span>
               </div>
               <div className="dropdown-content">
-                <a href="/">New File</a><br />
+                <li>New File</li>
               </div>
             </div>
             <div className="dropdown">
@@ -75,7 +81,7 @@ function MenuBar(props) {
                 <span className='dropdown-trigger-btn'>{props.debug}</span>
               </div>
               <div className="dropdown-content">
-                <a href="/">New File</a><br />
+                <li>New File</li>
               </div>
             </div>
             <div className="dropdown">
@@ -83,7 +89,7 @@ function MenuBar(props) {
                 <span className='dropdown-trigger-btn'>{props.print}</span>
               </div>
               <div className="dropdown-content">
-                <a href="/">New File</a><br />
+                <li>New File</li>
               </div>
             </div>
             <div className="dropdown">
@@ -91,7 +97,7 @@ function MenuBar(props) {
                 <span className='dropdown-trigger-btn'>{props.shell}</span>
               </div>
               <div className="dropdown-content">
-                <a href="/">New File</a><br />
+                <li>New File</li>
               </div>
             </div>
             <div className="dropdown">
@@ -99,7 +105,7 @@ function MenuBar(props) {
                 <span className='dropdown-trigger-btn'>{props.keys}</span>
               </div>
               <div className="dropdown-content">
-                <a href="/">New File</a><br />
+                <li>New File</li>
               </div>
             </div>
             <div className="dropdown">
@@ -107,7 +113,7 @@ function MenuBar(props) {
                 <span className='dropdown-trigger-btn'>{props.help}</span>
               </div>
               <div className="dropdown-content">
-                <a href="/">New File</a><br />
+                <li>New File</li>
               </div>
             </div>
             <div>
@@ -132,4 +138,17 @@ MenuBar.defaultProps = {
   shell: "Shell",
   keys: "Keys",
   help: "Help"
+}
+
+MenuBar.propTypes = {
+  file: PropTypes.string.isRequired,
+  edit: PropTypes.string.isRequired,
+  view: PropTypes.string.isRequired,
+  go: PropTypes.string.isRequired,
+  run: PropTypes.string.isRequired,
+  debug: PropTypes.string.isRequired,
+  print: PropTypes.string.isRequired,
+  shell: PropTypes.string.isRequired,
+  keys: PropTypes.string.isRequired,
+  help: PropTypes.string.isRequired
 }

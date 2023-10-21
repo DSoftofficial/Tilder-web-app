@@ -7,6 +7,7 @@
     --trigger-btn-dropdown-hover: rgba(72, 48, 177, 0.575);
     --body-main-bg-color: rgb(10, 4, 17);
     --sidebar-icons-hover: rgb(46, 5, 90);
+    --a-hover: rgb(201, 201, 201);
 }
 
 body {
@@ -22,6 +23,18 @@ nav {
     padding: 12px;
     border-radius: 12px;
     margin: 5px;
+}
+
+a{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+li{
+    cursor: pointer;
+    color: white;
+    list-style: none;
 }
 
 #header_icon {
@@ -58,7 +71,6 @@ nav {
 
 .dropdown-trigger-btn:hover {
     background-color: var(--trigger-btn-dropdown-hover);
-
 }
 
 .dropdown-content {
@@ -81,14 +93,12 @@ nav {
     border-radius: 2px;
 }
 
-.dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
+.dropdown-content li {
+    padding: 1px;
 }
 
-.dropdown-content a:hover {
-    color: rgb(158, 155, 155);
+.dropdown-content li:hover {
+    color: var(--a-hover);
 }
 
 .dropdown:hover .dropdown-content {
@@ -102,10 +112,8 @@ nav {
 }
 
 .SideBarmainwrper{
-    display: grid;
-    grid-template-columns: 20vw 3.5vw;
+    display: flex;
     gap: 2px;
-    /* justify-content: space-between; */
 }
 
 .mainsect{
@@ -127,9 +135,10 @@ nav {
     align-items: center;
 }
 
-.editor-wrapper {
+#editorwrapper {
     display: flex;
     justify-content: space-between;
+    width: 92vw;
 }
 
 .tabswrapper{
@@ -156,6 +165,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .iconWrapper:hover {
@@ -203,19 +213,10 @@ nav {
     background-color: var(--main-bg-color);
 }
 
-.filepioneer{
+#filepioneer{
     display: none;
     width: 20vw;
     height: 90vh;
     background-color: var(--main-bg-color);
     color: white;
-}
-
-#sidebariconsi {
-    float: right;
-    display: flex;
-    width: 3vw;
-    height: 8vh;
-    align-items: center;
-    justify-content: center;
 }
