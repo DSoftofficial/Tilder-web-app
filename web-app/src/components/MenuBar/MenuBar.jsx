@@ -20,110 +20,92 @@ function MenuBar(props) {
           </div>
           <div className="navigation">
             <div className="dropdown">
-              <div className="wrapper">
-                <span className='dropdown-trigger-btn'>{props.file}</span>
-              </div>
+              <span className='dropdown-trigger-btn'>{props.file}</span>
               <div className="dropdown-content">
-                <li aria-label='New File (Ctrl + N)'>New File</li>
-                <li aria-label=''>New Folder</li>
-                <li aria-label=''>New Window</li>
-                <li aria-label=''>New Tab</li>
-                <hr className='dropdowncontent-hr' />
-                <li onClick={filePicker} aria-label=''>Open File</li>
-                <li aria-label=''>Open Folder</li>
-                <li aria-label=''>Open Recent</li>
-                <div className="subdropdown-content">
-                  <li>Recent</li>
-                </div>
-                <hr className='dropdowncontent-hr' />
-                <li aria-label=''>Edit</li>
-                <li aria-label=''>Edit recent file</li>
-                <li aria-label=''>Edit file temporarily</li>
-                <hr className='dropdowncontent-hr' />
-                <li aria-label=''>Save</li>
-                <li aria-label=''>Save as</li>
-                <li aria-label=''>Change Save's root directory</li>
-                <hr className='dropdowncontent-hr' />
-                <li onClick={quit} aria-label=''>Quit Editor</li>
+                <ul>
+                  <li aria-label='New File (Ctrl + N)'>New File</li>
+                  <li aria-label=''>New Folder</li>
+                  <li aria-label=''>New Window</li>
+                  <li aria-label=''>New Tab</li>
+                  <hr className='dropdowncontent-hr' />
+                  <li onClick={filePicker} aria-label=''>Open File</li>
+                  <li aria-label=''>Open Folder</li>
+                  <div className="subdropdown">
+                    <li>Open Recent</li>
+                    <div className='subdropdown-content'>
+                      <li>Recent <i class="fa-solid fa-chevron-right" className='rightarrow'></i></li>
+                    </div>
+                  </div>
+                  <hr className='dropdowncontent-hr' />
+                  <li aria-label=''>Edit</li>
+                  <li aria-label=''>Edit recent file</li>
+                  <li aria-label=''>Edit file temporarily</li>
+                  <hr className='dropdowncontent-hr' />
+                  <li aria-label=''>Save</li>
+                  <li aria-label=''>Save as</li>
+                  <li aria-label=''>Change Save's root directory</li>
+                  <hr className='dropdowncontent-hr' />
+                  <li onClick={quit} aria-label=''>Quit Editor</li>
+                </ul>
               </div>
             </div>
             <div className="dropdown">
-              <div className="wrapper">
-                <span className='dropdown-trigger-btn'>{props.edit}</span>
-              </div>
+              <span className='dropdown-trigger-btn'>{props.edit}</span>
               <div className="dropdown-content">
                 <li>New File</li>
               </div>
             </div>
             <div className="dropdown">
-              <div className="wrapper">
-                <span className='dropdown-trigger-btn'>{props.view}</span>
-              </div>
+              <span className='dropdown-trigger-btn'>{props.view}</span>
               <div className="dropdown-content">
                 <li>New File</li>
               </div>
             </div>
             <div className="dropdown">
-              <div className="wrapper">
-                <span className='dropdown-trigger-btn'>{props.go}</span>
-              </div>
+              <span className='dropdown-trigger-btn'>{props.go}</span>
               <div className="dropdown-content">
                 <li>New File</li>
               </div>
             </div>
             <div className="dropdown">
-              <div className="wrapper">
-                <span className='dropdown-trigger-btn'>{props.run}</span>
-              </div>
+              <span className='dropdown-trigger-btn'>{props.run}</span>
               <div className="dropdown-content">
                 <li>New File</li>
               </div>
             </div>
             <div className="dropdown">
-              <div className="wrapper">
-                <span className='dropdown-trigger-btn'>{props.debug}</span>
-              </div>
+              <span className='dropdown-trigger-btn'>{props.debug}</span>
               <div className="dropdown-content">
                 <li>New File</li>
               </div>
             </div>
             <div className="dropdown">
-              <div className="wrapper">
-                <span className='dropdown-trigger-btn'>{props.print}</span>
-              </div>
+              <span className='dropdown-trigger-btn'>{props.print}</span>
               <div className="dropdown-content">
                 <li>New File</li>
               </div>
             </div>
             <div className="dropdown">
-              <div className="wrapper">
-                <span className='dropdown-trigger-btn'>{props.shell}</span>
-              </div>
+              <span className='dropdown-trigger-btn'>{props.shell}</span>
               <div className="dropdown-content">
                 <li>New File</li>
               </div>
             </div>
             <div className="dropdown">
-              <div className="wrapper">
-                <span className='dropdown-trigger-btn'>{props.keys}</span>
-              </div>
+              <span className='dropdown-trigger-btn'>{props.keys}</span>
               <div className="dropdown-content">
                 <li>New File</li>
               </div>
             </div>
             <div className="dropdown">
-              <div className="wrapper">
-                <span className='dropdown-trigger-btn'>{props.help}</span>
-              </div>
+              <span className='dropdown-trigger-btn'>{props.help}</span>
               <div className="dropdown-content">
                 <li>New File</li>
               </div>
-            </div>
-            <div>
             </div>
           </div>
-        </nav>
-      </header>
+        </nav >
+      </header >
     </>
   );
 }

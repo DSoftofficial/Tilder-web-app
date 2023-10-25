@@ -5,8 +5,10 @@
     --main-bg-color: rgb(32, 0, 66);
     --content-box-bg-color: rgb(20, 1, 39);
     --trigger-btn-dropdown-hover: rgba(72, 48, 177, 0.575);
+    --trigger-btn-subdropdown-hover: rgba(72, 48, 177, 0.575);
     --body-main-bg-color: rgb(10, 4, 17);
     --sidebar-icons-hover: rgb(46, 5, 90);
+    --li-hover: rgb(201, 201, 201);
     --a-hover: rgb(201, 201, 201);
 }
 
@@ -86,6 +88,7 @@ li{
     padding-top: 4px;
     border-radius: 6px;
     z-index: 2;
+    position: absolute;
 }
 
 .dropdowncontent-hr {
@@ -98,10 +101,53 @@ li{
 }
 
 .dropdown-content li:hover {
-    color: var(--a-hover);
+    color: var(--li-hover);
 }
 
 .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.subdropdown-trigger-btn {
+    cursor: pointer;
+    color: white;
+    list-style: none;
+}
+
+.subdropdown-trigger-btn:hover {
+    background-color: var(--trigger-btn-subdropdown-hover);
+}
+
+.subdropdown-content {
+    display: none;
+    margin-top: 1.7px;
+    margin-left: 12px;
+    background-color: var(--content-box-bg-color);
+    width: 21vw;
+    box-shadow: 0px 7px 15px 0px rgb(53, 53, 53);
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-top: 4px;
+    border-radius: 6px;
+    z-index: 2;
+    position: absolute;
+}
+
+.subdropdowncontent-hr {
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+.subdropdown-content li {
+    padding: 1px;
+}
+
+.subdropdown-content li:hover {
+    color: var(--li-hover);
+}
+
+.subdropdown:hover .subdropdown-content {
     display: block;
 }
 
@@ -219,4 +265,8 @@ li{
     height: 90vh;
     background-color: var(--main-bg-color);
     color: white;
+}
+
+.rightarrow{
+    
 }
