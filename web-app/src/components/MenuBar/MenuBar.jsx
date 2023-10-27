@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 function MenuBar(props) {
@@ -32,8 +33,10 @@ function MenuBar(props) {
                   <li aria-label=''>Open Folder</li>
                   <div className="subdropdown">
                     <li>Open Recent</li>
-                    <div className='subdropdown-content'>
-                      <li>Recent <i class="fa-solid fa-chevron-right" className='rightarrow'></i></li>
+                    <div className='subdropdown-content expandable'>
+                      <ul>
+                        <li>Recent <FontAwesomeIcon icon="fa-solid fa-chevron-right rightarrow" /></li>
+                      </ul>
                     </div>
                   </div>
                   <hr className='dropdowncontent-hr' />
@@ -52,13 +55,47 @@ function MenuBar(props) {
             <div className="dropdown">
               <span className='dropdown-trigger-btn'>{props.edit}</span>
               <div className="dropdown-content">
-                <li>New File</li>
+                <li>Cut</li>
+                <li>Copy</li>
+                <li>Paste</li>
+                <li>Paste as</li>
+                <hr className='dropdowncontent-hr' />
+                <li>Undo</li>
+                <li>Redo</li>
+                <hr className='dropdowncontent-hr' />
+                <li>Find</li>
+                <li>Replace</li>
+                <li>Find in Files</li>
+                <li>Replace in Files</li>
+                <hr className='dropdowncontent-hr' />
+                <li>Toggle Line Comment</li>
+                <li>Toggle Block Comment</li>
+                <hr className='dropdowncontent-hr' />
+                <li>Emmet: Expand Abbreviation</li>
               </div>
             </div>
             <div className="dropdown">
               <span className='dropdown-trigger-btn'>{props.view}</span>
               <div className="dropdown-content">
-                <li>New File</li>
+                <li>Command Palette</li>
+                <li>Open View</li>
+                <hr className='dropdowncontent-hr' />
+                <li>Appearance</li>
+                <li>Editor Layout</li>
+                <hr className='dropdowncontent-hr' />
+                <li>Explorer</li>
+                <li>Search</li>
+                <li>Source Control</li>
+                <li>Run</li>
+                <li>Extensions</li>
+                <li>Testing</li>
+                <hr className='dropdowncontent-hr' />
+                <li>Problems</li>
+                <li>Output</li>
+                <li>Debug Console</li>
+                <li>Terminal</li>
+                <hr className='dropdowncontent-hr' />
+                <li>Word Wrap</li>
               </div>
             </div>
             <div className="dropdown">
