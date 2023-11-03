@@ -3,6 +3,8 @@ Tilder in web app is a light weight code editor that helps as to code efficientl
 
 ![image](https://github.com/DSoftofficial/Tilder-web-app/assets/108980710/c37e46f9-aa24-434c-8717-a6a5c82fc6c5)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2bdebfd9-ee4c-4e94-9198-ba9fc29631fc/deploy-status)](https://app.netlify.com/sites/tilder/deploys)
+
 **Languages**
 ---
 
