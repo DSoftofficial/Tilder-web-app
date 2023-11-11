@@ -270,10 +270,6 @@ li{
     border-bottom-left-radius: 6px;
 }
 
-/* .expandable:hover .rightarrow{
-    gap: 10px;
-} */
-
 .expandable:hover .fa-chevron-right{
     transform: translateX(10px);
     transition: ease-in-out .5s;
