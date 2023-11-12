@@ -17,7 +17,7 @@ function MenuBar(props) {
       <header>
         <nav>
           <div id="header_icon">
-            <img src="/public/Tilder_icon.png" alt="tilder_icon_header" aria-label='Tilder' />
+            <img src="/Tilder_icon.png" alt="tilder_icon_header" aria-label='Tilder' />
           </div>
           <div className="navigation">
             <div className="dropdown">
@@ -35,7 +35,7 @@ function MenuBar(props) {
                     <li>Open Recent</li>
                     <div className='subdropdown-content expandable'>
                       <ul>
-                        <li>Recent <FontAwesomeIcon icon="fas fa-chevron-right" /></li>
+                        <li>Recent <FontAwesomeIcon icon="fa-solid fa-chevron-right" /></li>
                       </ul>
                     </div>
                   </div>

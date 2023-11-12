@@ -5,8 +5,8 @@ import MonacoEditor from './components/Editor/MonacoEditor.jsx'
 import SideBar from './components/SideBar/SideBar.jsx'
 import ReviewBar from './components/ReviewBar/ReviewBar.jsx'
 import StatusBar from './components/StatusBar/StatusBar.jsx'
-import Explorer from './components/SideBar/Main Components/Explorer/Explorer.jsx'
 import Tabs from './components/Tabs/Tabs.jsx'
+import FilePioneer from './components/SideBar/Main Components/filePioneer/filePioneer.jsx';
 
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
           </div>
         </div>
         <div className="SideBarmainwrper">
-          <Explorer />
+          <FilePioneer />
           <SideBar />
         </div>
       </div>

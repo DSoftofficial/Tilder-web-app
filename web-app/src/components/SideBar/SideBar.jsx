@@ -1,4 +1,3 @@
-import { Editor } from '@monaco-editor/react';
 import React, { useState } from 'react'
 
 export default function SideBar(props) {
