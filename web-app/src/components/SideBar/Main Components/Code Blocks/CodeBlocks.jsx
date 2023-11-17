@@ -2,8 +2,8 @@ import React from 'react'
 
 const CodeBlocks = () => {
   return (
-    <div>
-      
+    <div id="codeblocks" className='sidebarscontent'>
+      <h6>CodeBlocks</h6>
     </div>
   )
 }

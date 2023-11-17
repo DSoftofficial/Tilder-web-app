@@ -2,8 +2,8 @@ import React from 'react'
 
 const GitHub = () => {
   return (
-    <div>
-      
+    <div id="github" className='sidebarscontent'>
+      <h6>File Pioneer</h6>
     </div>
   )
 }
