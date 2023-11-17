@@ -260,7 +260,13 @@ li{
     background-color: var(--main-bg-color);
 }
 
-#filepioneer{
+
+.expandable:hover .fa-chevron-right{
+    transform: translateX(10px);
+    transition: ease-in-out .5s;
+}
+
+.sidebarscontent{
     display: none;
     width: 20vw;
     height: 90vh;
@@ -270,9 +276,12 @@ li{
     border-bottom-left-radius: 6px;
 }
 
-.expandable:hover .fa-chevron-right{
-    transform: translateX(10px);
-    transition: ease-in-out .5s;
+#searcharea{
+    display: none;
 }
-
-.search
+#filepioneer{
+    display: none;
+}
+#extensions{
+    display: none;
+}

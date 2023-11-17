@@ -7,6 +7,8 @@ import ReviewBar from './components/ReviewBar/ReviewBar.jsx'
 import StatusBar from './components/StatusBar/StatusBar.jsx'
 import Tabs from './components/Tabs/Tabs.jsx'
 import FilePioneer from './components/SideBar/Main Components/filePioneer/filePioneer.jsx';
+import Search from './components/SideBar/Main Components/Search/Search.jsx';
+import Extensions from './components/SideBar/Main Components/Extensions/Extensions.jsx';
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
           </div>
         </div>
         <div className="SideBarmainwrper">
+          <Extensions />
+          <Search />
           <FilePioneer />
           <SideBar />
         </div>

@@ -2,8 +2,8 @@ import React from 'react'
 
 const Debug = () => {
   return (
-    <div>
-      
+    <div id="debug" className='sidebarscontent'>
+      <h6>File Pioneer</h6>
     </div>
   )
 }
