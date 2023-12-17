@@ -6,9 +6,10 @@ import SideBar from './components/SideBar/SideBar.jsx'
 import ReviewBar from './components/ReviewBar/ReviewBar.jsx'
 import StatusBar from './components/StatusBar/StatusBar.jsx'
 import Tabs from './components/Tabs/Tabs.jsx'
-import FilePioneer from './components/SideBar/Main Components/filePioneer/filePioneer.jsx';
 import Search from './components/SideBar/Main Components/Search/Search.jsx';
 import Extensions from './components/SideBar/Main Components/Extensions/Extensions.jsx';
+import FilePioneer from './components/SideBar/Main Components/filePioneer/filePioneer.jsx'
+
 
 
 function App() {

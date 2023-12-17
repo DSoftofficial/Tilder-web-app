@@ -4,12 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 function MenuBar(props) {
-  const filePicker = () => {
+  function filePicker() {
     let input = document.createElement('input');
     input.type = 'file';
     input.click();
   }
-  const quit = () => {
+  function quit() {
     window.close()
   }
   return (
@@ -101,7 +101,24 @@ function MenuBar(props) {
             <div className="dropdown">
               <span className='dropdown-trigger-btn'>{props.go}</span>
               <div className="dropdown-content">
-                <li>New File</li>
+                <li>Switch Editor</li>
+                <li>Switch Group</li>
+                <hr className='dropdowncontent-hr' />
+                <li>Go to File</li>
+                <li>Go to Symbol in Workspace</li>
+                <hr className='dropdowncontent-hr' />
+                <li>Go to Symbol in Editor</li>
+                <li>Go to Definition</li>
+                <li>Go to Declaration</li>
+                <li>Go to Type Definition</li>
+                <li>Go to Implementations</li>
+                <li>Go to References</li>
+                <hr className='dropdowncontent-hr' />
+                <li>Go to Line/Column</li>
+                <li>Go to Bracket</li>
+                <hr className='dropdowncontent-hr' />
+                <li>Next Problem</li>
+                <li>Previous Problem</li>
               </div>
             </div>
             <div className="dropdown">
