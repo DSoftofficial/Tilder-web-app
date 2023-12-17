@@ -2,7 +2,7 @@ import React from 'react'
 
 function FilePioneer() {
     return (
-        <div id="filepioneer" className='sidebarscontent'>
+        <div id="filepioneerarea" className='sidebarscontent'>
             <h6>File Pioneer</h6>
         </div>
     )
