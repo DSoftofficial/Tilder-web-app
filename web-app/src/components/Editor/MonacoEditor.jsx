@@ -6,10 +6,9 @@ function MonacoEditor(props) {
         <>
             <div id="editorwrapper">
                 <Editor
-                    height="83vh"
                     theme='vs-dark'
                     defaultLanguage='python'
-                    options={{ minimap: { enabled: false }, wordWrapColumn: 80 }}
+                    options={{ minimap: { enabled: true }, wordWrapColumn: 82 }}
                     path='fileName'
                 />
             </div>
