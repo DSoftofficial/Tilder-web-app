@@ -187,8 +187,6 @@ li {
 #editorwrapper {
     display: flex;
     justify-content: space-between;
-    width: 92vw;
-    height: 83vh;
 }
 
 .tabswrapper {
@@ -268,14 +266,12 @@ li {
     transition: ease-in-out .5s;
 }
 
-#searcharea {
+.sidebarscontent{
     display: none;
-}
-
-#filepioneerarea {
-    display: none;
-}
-
-#extensions {
-    display: none;
+    width: 20vw;
+    height: 90vh;
+    background-color: var(--main-bg-color);
+    color: white;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
 }

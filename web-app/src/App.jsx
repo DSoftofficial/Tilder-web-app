@@ -10,20 +10,29 @@ import Search from "./components/SideBar/Main Components/Search/Search.jsx";
 import Extensions from "./components/SideBar/Main Components/Extensions/Extensions.jsx";
 import FilePioneer from "./components/SideBar/Main Components/filePioneer/filePioneer.jsx";
 
+
 function App() {
-  let editorwrapper = document.getElementById('editorwrapper')
-  let [display, changedisplay] = useState('none');
+  let [ariaExpandedisplay, changeariaExpandedisplay] = useState('none');
   const toggleAriaExpanded = () => {
     console.log("clicked");
-    if (display === "none") {
+    if (ariaExpandedisplay === "none") {
       // console.log("toggled")
-      changedisplay("flex");
-      editorwrapper.style.width = "72vw"
+      changeariaExpandedisplay("flex");
+      seteditorwrapperStyle({
+        width: '72vw',
+      })
+
     } else {
-      changedisplay("none");
-      editorwrapper.style.width = "92vw"
+      changeariaExpandedisplay("none");
+      seteditorwrapperStyle({
+        width: '92vw',
+      })
     }
   };
+  const [editorwrapperStyle, seteditorwrapperStyle] = useState({
+    width: '92vw',
+    height: '83vh'
+  })
   return (
     <>
       <MenuBar />
@@ -32,14 +41,16 @@ function App() {
           <ReviewBar />
           <div className="maincodearea">
             <Tabs />
-            <MonacoEditor/>
+            <MonacoEditor editorwrapperStyle={editorwrapperStyle} />
           </div>
         </div>
         <div className="SideBarmainwrper">
-          <Extensions />
-          <Search />
-          <FilePioneer ariaExpanded={display} />
-          <SideBar toggleAriaExpanded={toggleAriaExpanded} />
+          <div className="SideBarmainwrper" ariaExpanded={ariaExpandedisplay}>
+            <Extensions />
+            <Search />
+            <FilePioneer />
+            <SideBar toggleAriaExpanded={toggleAriaExpanded} />
+          </div>
         </div>
       </div>
       <StatusBar />
