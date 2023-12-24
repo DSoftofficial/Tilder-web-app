@@ -4,12 +4,11 @@ import { Editor } from '@monaco-editor/react';
 function MonacoEditor(props) {
     return (
         <>
-            <div id="editorwrapper">
+            <div id="editorwrapper" style={props.editorwrapperStyle}>
                 <Editor
-                    height="83vh"
                     theme='vs-dark'
                     defaultLanguage='python'
-                    options={{ minimap: { enabled: false }, wordWrapColumn: 80 }}
+                    options={{ minimap: { enabled: true }, wordWrapColumn: 82 }}
                     path='fileName'
                 />
             </div>
