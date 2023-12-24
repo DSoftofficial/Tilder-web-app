@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Search = () => {
+const Search = (props) => {
   return (
-    <div id="searcharea" className='sidebarscontent'>
+    <div id="searcharea" className='d-none'>
       <h6>Search</h6>
     </div>  
   )
