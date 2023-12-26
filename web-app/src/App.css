@@ -2,7 +2,7 @@
     font-family: 'Ubuntu', sans-serif;
     margin: 0;
     padding: 0;
-    --main-bg-color: rgb(32, 0, 66);
+    --main-bg-color: rgb(32, 0, 68);
     --content-box-bg-color: rgb(20, 1, 39);
     --subdropdown-box-bg-color: rgb(32, 0, 58);
     --trigger-btn-dropdown-hover: rgba(72, 48, 177, 0.575);
@@ -184,11 +184,6 @@ li {
     align-items: center;
 }
 
-#editorwrapper {
-    display: flex;
-    justify-content: space-between;
-}
-
 .tabswrapper {
     width: auto;
     height: 7vh;
@@ -260,10 +255,13 @@ li {
     background-color: var(--main-bg-color);
 }
 
+.fa-chevron-right{
+    transform: translateX(8px);
+}
 
 .expandable:hover .fa-chevron-right {
-    transform: translateX(10px);
-    transition: ease-in-out .5s;
+    transform: translateX(13px);
+    transition: ease-in-out 0.3s;
 }
 
 .sidebarscontent{

@@ -9,21 +9,256 @@ import Tabs from "./components/Tabs/Tabs.jsx";
 import Search from "./components/SideBar/Main Components/Search/Search.jsx";
 import Extensions from "./components/SideBar/Main Components/Extensions/Extensions.jsx";
 import FilePioneer from "./components/SideBar/Main Components/filePioneer/filePioneer.jsx";
-
+import GitHub from "./components/SideBar/Main Components/GItHub/GitHub.jsx";
+import Terminal from "./components/SideBar/Main Components/Terminal/Terminal.jsx";
+import Debug from "./components/SideBar/Main Components/Debug/Debug.jsx";
+import CodeBlocks from "./components/SideBar/Main Components/Code Blocks/CodeBlocks.jsx";
+import Git from "./components/SideBar/Main Components/Git/Git.jsx";
 
 function App() {
-  let [ariaExpandedisplay, changeariaExpandedisplay] = useState('none');
-  const toggleAriaExpanded = () => {
+  let [ariaExpandedisplayfilepioneer, changeariaExpandedisplayfilepioneer] = useState('none');
+  let [ariaExpandedisplaysearch, changeariaExpandedisplaysearch] = useState('none');
+  let [ariaExpandedisplaycodeblocks, changeariaExpandedisplaycodeblocks] = useState('none');
+  let [ariaExpandedisplaydebug, changeariaExpandedisplaydebug] = useState('none');
+  let [ariaExpandedisplayextensions, changeariaExpandedisplayextensions] = useState('none');
+  let [ariaExpandedisplaygit, changeariaExpandedisplaygit] = useState('none');
+  let [ariaExpandedisplaygithub, changeariaExpandedisplaygithub] = useState('none');
+  let [ariaExpandedisplayterminal, changeariaExpandedisplayterminal] = useState('none');
+  const toggleAriaExpandedfilepioneer = () => {
     console.log("clicked");
-    if (ariaExpandedisplay === "none") {
+    if (ariaExpandedisplayfilepioneer === "none") {
       // console.log("toggled")
-      changeariaExpandedisplay("flex");
+      changeariaExpandedisplayfilepioneer("flex");
+      changeariaExpandedisplaysearch("none");
+      changeariaExpandedisplaycodeblocks("none");
+      changeariaExpandedisplaydebug("none");
+      changeariaExpandedisplayextensions("none");
+      changeariaExpandedisplaygit("none");
+      changeariaExpandedisplaygithub("none");
+      changeariaExpandedisplayterminal("none");
       seteditorwrapperStyle({
         width: '72vw',
       })
-
-    } else {
-      changeariaExpandedisplay("none");
+    }
+    else {
+      changeariaExpandedisplayfilepioneer("none");
+      changeariaExpandedisplaysearch("none");
+      changeariaExpandedisplaycodeblocks("none");
+      changeariaExpandedisplaydebug("none");
+      changeariaExpandedisplayextensions("none");
+      changeariaExpandedisplaygit("none");
+      changeariaExpandedisplaygithub("none");
+      changeariaExpandedisplayterminal("none");
+      seteditorwrapperStyle({
+        width: '92vw',
+      })
+    }
+  };
+  const toggleAriaExpandedsearch = () => {
+    console.log("clicked");
+    if (ariaExpandedisplaysearch === "none") {
+      // console.log("toggled")
+      changeariaExpandedisplaysearch("flex");
+      changeariaExpandedisplayfilepioneer("none");
+      changeariaExpandedisplaycodeblocks("none");
+      changeariaExpandedisplaydebug("none");
+      changeariaExpandedisplayextensions("none");
+      changeariaExpandedisplaygit("none");
+      changeariaExpandedisplaygithub("none");
+      changeariaExpandedisplayterminal("none");
+      seteditorwrapperStyle({
+        width: '72vw',
+      })
+    }
+    else {
+      changeariaExpandedisplaysearch("none");
+      changeariaExpandedisplayfilepioneer("none");
+      changeariaExpandedisplaycodeblocks("none");
+      changeariaExpandedisplaydebug("none");
+      changeariaExpandedisplayextensions("none");
+      changeariaExpandedisplaygit("none");
+      changeariaExpandedisplaygithub("none");
+      changeariaExpandedisplayterminal("none");
+      seteditorwrapperStyle({
+        width: '92vw',
+      })
+    }
+  };
+  const toggleAriaExpandedcodeblocks = () => {
+    console.log("clicked");
+    if (ariaExpandedisplaycodeblocks === "none") {
+      // console.log("toggled")
+      changeariaExpandedisplaysearch("none");
+      changeariaExpandedisplayfilepioneer("none");
+      changeariaExpandedisplaycodeblocks("flex");
+      changeariaExpandedisplaydebug("none");
+      changeariaExpandedisplayextensions("none");
+      changeariaExpandedisplaygit("none");
+      changeariaExpandedisplaygithub("none");
+      changeariaExpandedisplayterminal("none");
+      seteditorwrapperStyle({
+        width: '72vw',
+      })
+    }
+    else {
+      changeariaExpandedisplaysearch("none");
+      changeariaExpandedisplayfilepioneer("none");
+      changeariaExpandedisplaycodeblocks("none");
+      changeariaExpandedisplaydebug("none");
+      changeariaExpandedisplayextensions("none");
+      changeariaExpandedisplaygit("none");
+      changeariaExpandedisplaygithub("none");
+      changeariaExpandedisplayterminal("none");
+      seteditorwrapperStyle({
+        width: '92vw',
+      })
+    }
+  };
+  const toggleAriaExpandedgithub = () => {
+    console.log("clicked");
+    if (ariaExpandedisplaygithub === "none") {
+      // console.log("toggled")
+      changeariaExpandedisplaysearch("none");
+      changeariaExpandedisplayfilepioneer("none");
+      changeariaExpandedisplaycodeblocks("none");
+      changeariaExpandedisplaydebug("none");
+      changeariaExpandedisplayextensions("none");
+      changeariaExpandedisplaygit("none");
+      changeariaExpandedisplaygithub("flex");
+      changeariaExpandedisplayterminal("none");
+      seteditorwrapperStyle({
+        width: '72vw',
+      })
+    }
+    else {
+      changeariaExpandedisplaysearch("none");
+      changeariaExpandedisplayfilepioneer("none");
+      changeariaExpandedisplaycodeblocks("none");
+      changeariaExpandedisplaydebug("none");
+      changeariaExpandedisplayextensions("none");
+      changeariaExpandedisplaygit("none");
+      changeariaExpandedisplaygithub("none");
+      changeariaExpandedisplayterminal("none");
+      seteditorwrapperStyle({
+        width: '92vw',
+      })
+    }
+  };
+  const toggleAriaExpandedgit = () => {
+    console.log("clicked");
+    if (ariaExpandedisplaygit === "none") {
+      // console.log("toggled")
+      changeariaExpandedisplaysearch("none");
+      changeariaExpandedisplayfilepioneer("none");
+      changeariaExpandedisplaycodeblocks("none");
+      changeariaExpandedisplaydebug("none");
+      changeariaExpandedisplayextensions("none");
+      changeariaExpandedisplaygit("flex");
+      changeariaExpandedisplaygithub("none");
+      changeariaExpandedisplayterminal("none");
+      seteditorwrapperStyle({
+        width: '72vw',
+      })
+    }
+    else {
+      changeariaExpandedisplaysearch("none");
+      changeariaExpandedisplayfilepioneer("none");
+      changeariaExpandedisplaycodeblocks("none");
+      changeariaExpandedisplaydebug("none");
+      changeariaExpandedisplayextensions("none");
+      changeariaExpandedisplaygit("none");
+      changeariaExpandedisplaygithub("none");
+      changeariaExpandedisplayterminal("none");
+      seteditorwrapperStyle({
+        width: '92vw',
+      })
+    }
+  };
+  const toggleAriaExpandedebug = () => {
+    console.log("clicked");
+    if (ariaExpandedisplaydebug === "none") {
+      // console.log("toggled")
+      changeariaExpandedisplaysearch("none");
+      changeariaExpandedisplayfilepioneer("none");
+      changeariaExpandedisplaycodeblocks("none");
+      changeariaExpandedisplaydebug("flex");
+      changeariaExpandedisplayextensions("none");
+      changeariaExpandedisplaygit("none");
+      changeariaExpandedisplaygithub("none");
+      changeariaExpandedisplayterminal("none");
+      seteditorwrapperStyle({
+        width: '72vw',
+      })
+    }
+    else {
+      changeariaExpandedisplaysearch("none");
+      changeariaExpandedisplayfilepioneer("none");
+      changeariaExpandedisplaycodeblocks("none");
+      changeariaExpandedisplaydebug("none");
+      changeariaExpandedisplayextensions("none");
+      changeariaExpandedisplaygit("none");
+      changeariaExpandedisplaygithub("none");
+      changeariaExpandedisplayterminal("none");
+      seteditorwrapperStyle({
+        width: '92vw',
+      })
+    }
+  };
+  const toggleAriaExpandedterminal = () => {
+    console.log("clicked");
+    if (ariaExpandedisplayterminal === "none") {
+      // console.log("toggled")
+      changeariaExpandedisplaysearch("none");
+      changeariaExpandedisplayfilepioneer("none");
+      changeariaExpandedisplaycodeblocks("none");
+      changeariaExpandedisplaydebug("none");
+      changeariaExpandedisplayextensions("none");
+      changeariaExpandedisplaygit("none");
+      changeariaExpandedisplaygithub("none");
+      changeariaExpandedisplayterminal("flex");
+      seteditorwrapperStyle({
+        width: '72vw',
+      })
+    }
+    else {
+      changeariaExpandedisplaysearch("none");
+      changeariaExpandedisplayfilepioneer("none");
+      changeariaExpandedisplaycodeblocks("none");
+      changeariaExpandedisplaydebug("none");
+      changeariaExpandedisplayextensions("none");
+      changeariaExpandedisplaygit("none");
+      changeariaExpandedisplaygithub("none");
+      changeariaExpandedisplayterminal("none");
+      seteditorwrapperStyle({
+        width: '92vw',
+      })
+    }
+  };
+  const toggleAriaExpandedextensions = () => {
+    console.log("clicked");
+    if (ariaExpandedisplayextensions === "none") {
+      // console.log("toggled")
+      changeariaExpandedisplaysearch("none");
+      changeariaExpandedisplayfilepioneer("none");
+      changeariaExpandedisplaycodeblocks("none");
+      changeariaExpandedisplaydebug("none");
+      changeariaExpandedisplayextensions("flex");
+      changeariaExpandedisplaygit("none");
+      changeariaExpandedisplaygithub("none");
+      changeariaExpandedisplayterminal("none");
+      seteditorwrapperStyle({
+        width: '72vw',
+      })
+    }
+    else {
+      changeariaExpandedisplaysearch("none");
+      changeariaExpandedisplayfilepioneer("none");
+      changeariaExpandedisplaycodeblocks("none");
+      changeariaExpandedisplaydebug("none");
+      changeariaExpandedisplayextensions("none");
+      changeariaExpandedisplaygit("none");
+      changeariaExpandedisplaygithub("none");
+      changeariaExpandedisplayterminal("none");
       seteditorwrapperStyle({
         width: '92vw',
       })
@@ -31,7 +266,8 @@ function App() {
   };
   const [editorwrapperStyle, seteditorwrapperStyle] = useState({
     width: '92vw',
-    height: '83vh'
+    height: '83vh',
+    display: 'flex'
   })
   return (
     <>
@@ -45,11 +281,16 @@ function App() {
           </div>
         </div>
         <div className="SideBarmainwrper">
-          <div className="SideBarmainwrper" ariaExpanded={ariaExpandedisplay}>
-            <Extensions />
-            <Search />
-            <FilePioneer />
-            <SideBar toggleAriaExpanded={toggleAriaExpanded} />
+          <div className="SideBarmainwrper">
+            <CodeBlocks ariaExpandedisplaycodeblocks={ariaExpandedisplaycodeblocks}/>
+            <Terminal ariaExpandedisplayterminal={ariaExpandedisplayterminal}/>
+            <Git ariaExpandedisplaygit={ariaExpandedisplaygit}/>
+            <Extensions ariaExpandedisplayextensions={ariaExpandedisplayextensions}/>
+            <GitHub ariaExpandedisplaygithub={ariaExpandedisplaygithub}/>
+            <Debug ariaExpandedisplaydebug={ariaExpandedisplaydebug}/>
+            <Search ariaExpandedisplaysearch={ariaExpandedisplaysearch} />
+            <FilePioneer ariaExpandedisplayfilepioneer={ariaExpandedisplayfilepioneer}/>
+            <SideBar toggleAriaExpandedfilepioneer={toggleAriaExpandedfilepioneer} toggleAriaExpandedsearch={toggleAriaExpandedsearch} toggleAriaExpandedextensions={toggleAriaExpandedextensions} toggleAriaExpandedterminal={toggleAriaExpandedterminal} toggleAriaExpandedebug={toggleAriaExpandedebug} toggleAriaExpandedgit={toggleAriaExpandedgit} toggleAriaExpandedgithub={toggleAriaExpandedgithub} toggleAriaExpandedcodeblocks={toggleAriaExpandedcodeblocks} />
           </div>
         </div>
       </div>

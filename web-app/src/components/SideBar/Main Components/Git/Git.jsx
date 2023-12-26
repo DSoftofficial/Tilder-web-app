@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Git = () => {
+const Git = (props) => {
   return (
-    <div>
-      
+    <div id="gitarea" className={`sidebarscontent d-${props.ariaExpandedisplaygit}`}>
+      <h6>Git</h6>
     </div>
   )
 }

@@ -1,8 +1,8 @@
 import React from 'react'
 
-const GitHub = () => {
+const GitHub = (props) => {
   return (
-    <div id="github" className=''>
+    <div id="githubarea" className={`sidebarscontent d-${props.ariaExpandedisplaygithub}`}>
       <h6>GitHub</h6>
     </div>
   )

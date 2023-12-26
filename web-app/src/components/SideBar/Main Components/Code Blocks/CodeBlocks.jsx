@@ -1,9 +1,9 @@
 import React from 'react'
 
-const CodeBlocks = () => {
+const CodeBlocks = (props) => {
   return (
-    <div id="codeblocks" className='sidebarscontent'>
-      <h6>CodeBlocks</h6>
+    <div id="codeblocksarea" className={`sidebarscontent d-${props.ariaExpandedisplaycodeblocks}`}>
+      <h6>Code Blocks</h6>
     </div>
   )
 }
