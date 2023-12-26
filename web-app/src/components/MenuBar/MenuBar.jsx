@@ -43,7 +43,7 @@ function MenuBar(props) {
                       <ul>
                         <li>
                           Recent
-                          <FontAwesomeIcon icon="fa-solid fa-chevron-right" />
+                          <i className="fa-solid fa-chevron-right"></i>
                         </li>
                       </ul>
                     </div>

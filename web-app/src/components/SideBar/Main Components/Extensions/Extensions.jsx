@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Extensions = () => {
+const Extensions = (props) => {
   return (
-    <div id="extensions" className='sidebarscontent'>
+    <div id="extensionsarea" className={`sidebarscontent d-${props.ariaExpandedisplayextensions}`}>
       <h6>Extensions</h6>
     </div>
   )

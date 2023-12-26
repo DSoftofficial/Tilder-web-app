@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Terminal = () => {
+const Terminal = (props) => {
   return (
-    <div>
-      
+    <div id="terminalarea" className={`sidebarscontent d-${props.ariaExpandedisplayterminal}`}>
+      <h6>Terminal</h6>
     </div>
   )
 }
