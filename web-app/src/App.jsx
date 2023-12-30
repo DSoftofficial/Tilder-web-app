@@ -24,6 +24,8 @@ function App() {
   let [ariaExpandedisplaygit, changeariaExpandedisplaygit] = useState('none');
   let [ariaExpandedisplaygithub, changeariaExpandedisplaygithub] = useState('none');
   let [ariaExpandedisplayterminal, changeariaExpandedisplayterminal] = useState('none');
+  const [TabDisplay, setTabDisplay] = useState('flex')
+  const [WelcomePageDisplay, setWelcomePageDisplay] = useState('flex')
   const toggleAriaExpandedfilepioneer = () => {
     console.log("clicked");
     if (ariaExpandedisplayfilepioneer === "none") {
@@ -36,7 +38,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      seteditorwrapperStyle({
+      changeinsidemaincodeareaStyle({
         width: '72vw',
       })
     }
@@ -49,7 +51,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      seteditorwrapperStyle({
+      changeinsidemaincodeareaStyle({
         width: '92vw',
       })
     }
@@ -66,7 +68,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      seteditorwrapperStyle({
+      changeinsidemaincodeareaStyle({
         width: '72vw',
       })
     }
@@ -79,7 +81,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      seteditorwrapperStyle({
+      changeinsidemaincodeareaStyle({
         width: '92vw',
       })
     }
@@ -96,7 +98,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      seteditorwrapperStyle({
+      changeinsidemaincodeareaStyle({
         width: '72vw',
       })
     }
@@ -109,7 +111,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      seteditorwrapperStyle({
+      changeinsidemaincodeareaStyle({
         width: '92vw',
       })
     }
@@ -126,7 +128,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("flex");
       changeariaExpandedisplayterminal("none");
-      seteditorwrapperStyle({
+      changeinsidemaincodeareaStyle({
         width: '72vw',
       })
     }
@@ -139,7 +141,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      seteditorwrapperStyle({
+      changeinsidemaincodeareaStyle({
         width: '92vw',
       })
     }
@@ -156,7 +158,7 @@ function App() {
       changeariaExpandedisplaygit("flex");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      seteditorwrapperStyle({
+      changeinsidemaincodeareaStyle({
         width: '72vw',
       })
     }
@@ -169,7 +171,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      seteditorwrapperStyle({
+      changeinsidemaincodeareaStyle({
         width: '92vw',
       })
     }
@@ -186,7 +188,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      seteditorwrapperStyle({
+      changeinsidemaincodeareaStyle({
         width: '72vw',
       })
     }
@@ -199,7 +201,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      seteditorwrapperStyle({
+      changeinsidemaincodeareaStyle({
         width: '92vw',
       })
     }
@@ -216,7 +218,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("flex");
-      seteditorwrapperStyle({
+      changeinsidemaincodeareaStyle({
         width: '72vw',
       })
     }
@@ -229,7 +231,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      seteditorwrapperStyle({
+      changeinsidemaincodeareaStyle({
         width: '92vw',
       })
     }
@@ -246,7 +248,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      seteditorwrapperStyle({
+      changeinsidemaincodeareaStyle({
         width: '72vw',
       })
     }
@@ -259,15 +261,14 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      seteditorwrapperStyle({
+      changeinsidemaincodeareaStyle({
         width: '92vw',
       })
     }
   };
-  const [editorwrapperStyle, seteditorwrapperStyle] = useState({
+  const [insidemaincodeareaStyle, changeinsidemaincodeareaStyle] = useState({
     width: '92vw',
-    height: '83vh',
-    display: 'flex'
+    height: '83.5vh'
   })
   return (
     <>
@@ -276,20 +277,74 @@ function App() {
         <div className="codewrpr">
           <ReviewBar />
           <div className="maincodearea">
-            <Tabs />
-            <MonacoEditor editorwrapperStyle={editorwrapperStyle} />
+            <Tabs tabDisplay={TabDisplay}/>
+            <MonacoEditor style={insidemaincodeareaStyle} />
+            <div className={`welcomePage d-${WelcomePageDisplay}`} style={insidemaincodeareaStyle}>
+              <div className="welcomePageSection">
+                <h1>Welcome back to Tilder!</h1>
+                <p>Code like a pro!</p>
+              </div>
+              <div className="welcomePageSection">
+                <h2>Important Links</h2>
+                <div id="importantLinks">
+                  <a href="https://github.com" className="linkto" target="_blank">
+                    <div className="link">
+                      <div className="link-icon">
+                        <i className="fa-brands fa-github fa-2xl"></i>
+                      </div>
+                      <div className="link-content">
+                        <h4>Github</h4>
+                        <p>Host your code!</p>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="https://www.youtube.com" className="linkto" target="_blank">
+                    <div className="link">
+                      <div className="link-icon">
+                        <i className="fa-brands fa-youtube fa-2xl"></i>
+                      </div>
+                      <div className="link-content">
+                        <h4>Youtube</h4>
+                        <p>Watch Videos!</p>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="" className="linkto" target="_blank">
+                    <div className="link">
+                      <div className="link-icon">
+                      </div>
+                      <div className="link-content">
+                        <h4>DSoft</h4>
+                        <p>Explore our other products.</p>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="https://stackoverflow.com" className="linkto" target="_blank">
+                    <div className="link">
+                      <div className="link-icon">
+                        <i className="fa-brands fa-stack-overflow fa-2xl"></i>
+                      </div>
+                      <div className="link-content">
+                        <h4>Stack Overflow</h4>
+                        <p>Fix your problem!</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="SideBarmainwrper">
           <div className="SideBarmainwrper">
-            <CodeBlocks ariaExpandedisplaycodeblocks={ariaExpandedisplaycodeblocks}/>
-            <Terminal ariaExpandedisplayterminal={ariaExpandedisplayterminal}/>
-            <Git ariaExpandedisplaygit={ariaExpandedisplaygit}/>
-            <Extensions ariaExpandedisplayextensions={ariaExpandedisplayextensions}/>
-            <GitHub ariaExpandedisplaygithub={ariaExpandedisplaygithub}/>
-            <Debug ariaExpandedisplaydebug={ariaExpandedisplaydebug}/>
+            <CodeBlocks ariaExpandedisplaycodeblocks={ariaExpandedisplaycodeblocks} />
+            <Terminal ariaExpandedisplayterminal={ariaExpandedisplayterminal} />
+            <Git ariaExpandedisplaygit={ariaExpandedisplaygit} />
+            <Extensions ariaExpandedisplayextensions={ariaExpandedisplayextensions} />
+            <GitHub ariaExpandedisplaygithub={ariaExpandedisplaygithub} />
+            <Debug ariaExpandedisplaydebug={ariaExpandedisplaydebug} />
             <Search ariaExpandedisplaysearch={ariaExpandedisplaysearch} />
-            <FilePioneer ariaExpandedisplayfilepioneer={ariaExpandedisplayfilepioneer}/>
+            <FilePioneer ariaExpandedisplayfilepioneer={ariaExpandedisplayfilepioneer} />
             <SideBar toggleAriaExpandedfilepioneer={toggleAriaExpandedfilepioneer} toggleAriaExpandedsearch={toggleAriaExpandedsearch} toggleAriaExpandedextensions={toggleAriaExpandedextensions} toggleAriaExpandedterminal={toggleAriaExpandedterminal} toggleAriaExpandedebug={toggleAriaExpandedebug} toggleAriaExpandedgit={toggleAriaExpandedgit} toggleAriaExpandedgithub={toggleAriaExpandedgithub} toggleAriaExpandedcodeblocks={toggleAriaExpandedcodeblocks} />
           </div>
         </div>

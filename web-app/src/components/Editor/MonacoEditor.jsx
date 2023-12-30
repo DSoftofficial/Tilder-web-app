@@ -4,7 +4,7 @@ import { Editor } from '@monaco-editor/react';
 function MonacoEditor(props) {
     return (
         <>
-            <div id="editorwrapper" style={props.editorwrapperStyle}>
+            <div id="editorwrapper">
                 <Editor
                     theme='vs-dark'
                     defaultLanguage='python'
