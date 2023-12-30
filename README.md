@@ -1,8 +1,6 @@
 # Tilder in Web App
 Tilder web app is a lightweight code editor that helps us to code efficiently & swiftly in a 360° world. It has powerful efficient features and tools that deliver you with your powerful code. It supports 100+ languages & uses Monaco-editor. 
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/06b27a55-fc1f-4f0d-87e9-47d7e2c31536/deploy-status)](https://app.netlify.com/sites/tildercode/deploys?branch=https://github.com/dhrubajyotifounderofDSoft/Tilder-web-app)
-
 ![image](https://github.com/DSoftofficial/Tilder-web-app/assets/108980710/c37e46f9-aa24-434c-8717-a6a5c82fc6c5)
 
 **Languages**
