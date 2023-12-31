@@ -1,5 +1,5 @@
 {
-  "homepage": "https://dhrubajyotifounderofDSoft.github.io/Tilder-web-app",
+  "homepage": "https://DSoftofficial.github.io/Tilder-web-app",
   "name": "web-app",
   "private": true,
   "version": "0.0.0",
@@ -10,7 +10,7 @@
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
