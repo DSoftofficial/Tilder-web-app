@@ -15,7 +15,7 @@ import Debug from "./components/SideBar/Main Components/Debug/Debug.jsx";
 import CodeBlocks from "./components/SideBar/Main Components/Code Blocks/CodeBlocks.jsx";
 import Git from "./components/SideBar/Main Components/Git/Git.jsx";
 
-function App() {
+function App(props) {
   let [ariaExpandedisplayfilepioneer, changeariaExpandedisplayfilepioneer] = useState('none');
   let [ariaExpandedisplaysearch, changeariaExpandedisplaysearch] = useState('none');
   let [ariaExpandedisplaycodeblocks, changeariaExpandedisplaycodeblocks] = useState('none');
@@ -26,6 +26,11 @@ function App() {
   let [ariaExpandedisplayterminal, changeariaExpandedisplayterminal] = useState('none');
   const [TabDisplay, setTabDisplay] = useState('flex')
   const [WelcomePageDisplay, setWelcomePageDisplay] = useState('flex')
+  const toggleWelcomePageDisplay = () => {
+    console.log("clicked");
+    setTabDisplay('none');
+    setWelcomePageDisplay('none');
+  };
   const toggleAriaExpandedfilepioneer = () => {
     console.log("clicked");
     if (ariaExpandedisplayfilepioneer === "none") {
@@ -277,7 +282,7 @@ function App() {
         <div className="codewrpr">
           <ReviewBar />
           <div className="maincodearea">
-            <Tabs tabDisplay={TabDisplay}/>
+            <Tabs tabDisplay={TabDisplay} toggleWelcomePagedisplay={toggleWelcomePageDisplay} />
             <MonacoEditor style={insidemaincodeareaStyle} />
             <div className={`welcomePage d-${WelcomePageDisplay}`} style={insidemaincodeareaStyle}>
               <div className="welcomePageSection">

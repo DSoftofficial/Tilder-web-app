@@ -304,11 +304,7 @@ li {
 }
 
 .fa-xmark {
-    transform: translateX(8px);
-}
-
-.fa-xmark:hover {
-    transform: translateX(8px);
+    z-index: 2;
 }
 
 .welcomePage {
@@ -317,10 +313,6 @@ li {
     width: 92vw;
     height: 83.5vh;
     background-color: var(--welcome-page);
-}
-
-.welcomeTilderIcon{
-    z-index: 1;
 }
 
 .welcomePageSection {
@@ -362,4 +354,22 @@ li {
 
 .link-content{
     margin-left: 1vw;
+}
+
+.tabClose{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(8px);
+    cursor: pointer;
+    width: 1.5pc;
+    height: 1.5pc;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.tabClose:hover{
+    background-color: rgb(255, 255, 255, 0.4);
 }
