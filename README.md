@@ -4,7 +4,6 @@ Tilder web app is a lightweight code editor that helps us to code efficiently & 
 ![image](https://github.com/DSoftofficial/Tilder-web-app/assets/108980710/c37e46f9-aa24-434c-8717-a6a5c82fc6c5)
 
 **Languages**
----
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![HTML](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
