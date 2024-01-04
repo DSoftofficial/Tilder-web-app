@@ -25,7 +25,7 @@ function MenuBar(props) {
           </div>
           <div className="navigation">
             <div className="dropdown">
-              <span className="dropdown-trigger-btn">{props.file}</span>
+              <span className="dropdown-trigger-btn">Filed</span>
               <div className="dropdown-content">
                 <ul>
                   <li aria-label="New File (Ctrl + N)">New File</li>
