@@ -14,6 +14,7 @@ import Terminal from "./components/SideBar/Main Components/Terminal/Terminal.jsx
 import Debug from "./components/SideBar/Main Components/Debug/Debug.jsx";
 import CodeBlocks from "./components/SideBar/Main Components/Code Blocks/CodeBlocks.jsx";
 import Git from "./components/SideBar/Main Components/Git/Git.jsx";
+import DefaultPage from "./components/DefaultPage/DefaultPage.jsx";
 
 function App(props) {
   let [ariaExpandedisplayfilepioneer, changeariaExpandedisplayfilepioneer] = useState('none');
@@ -26,8 +27,10 @@ function App(props) {
   let [ariaExpandedisplayterminal, changeariaExpandedisplayterminal] = useState('none');
   const [TabDisplay, setTabDisplay] = useState('flex')
   const [WelcomePageDisplay, setWelcomePageDisplay] = useState('flex')
+  const [DefaultPageDisplay, setDefaultPageDisplay] = useState('none')
   const toggleWelcomePageDisplay = () => {
     console.log("clicked");
+    setDefaultPageDisplay('flex')
     setTabDisplay('none');
     setWelcomePageDisplay('none');
   };
@@ -282,6 +285,7 @@ function App(props) {
         <div className="codewrpr">
           <ReviewBar />
           <div className="maincodearea">
+            <DefaultPage DefaultPageDisplay={DefaultPageDisplay} />
             <Tabs tabDisplay={TabDisplay} toggleWelcomePagedisplay={toggleWelcomePageDisplay} />
             <MonacoEditor style={insidemaincodeareaStyle} />
             <div className={`welcomePage d-${WelcomePageDisplay}`} style={insidemaincodeareaStyle}>
@@ -290,7 +294,7 @@ function App(props) {
                 <p>Code like a pro!</p>
               </div>
               <div className="welcomePageSection">
-                <h2>Important Links</h2>
+                <h2>Quick Links</h2>
                 <div id="importantLinks">
                   <a href="https://github.com" className="linkto" target="_blank">
                     <div className="link">
@@ -341,17 +345,15 @@ function App(props) {
           </div>
         </div>
         <div className="SideBarmainwrper">
-          <div className="SideBarmainwrper">
-            <CodeBlocks ariaExpandedisplaycodeblocks={ariaExpandedisplaycodeblocks} />
-            <Terminal ariaExpandedisplayterminal={ariaExpandedisplayterminal} />
-            <Git ariaExpandedisplaygit={ariaExpandedisplaygit} />
-            <Extensions ariaExpandedisplayextensions={ariaExpandedisplayextensions} />
-            <GitHub ariaExpandedisplaygithub={ariaExpandedisplaygithub} />
-            <Debug ariaExpandedisplaydebug={ariaExpandedisplaydebug} />
-            <Search ariaExpandedisplaysearch={ariaExpandedisplaysearch} />
-            <FilePioneer ariaExpandedisplayfilepioneer={ariaExpandedisplayfilepioneer} />
-            <SideBar toggleAriaExpandedfilepioneer={toggleAriaExpandedfilepioneer} toggleAriaExpandedsearch={toggleAriaExpandedsearch} toggleAriaExpandedextensions={toggleAriaExpandedextensions} toggleAriaExpandedterminal={toggleAriaExpandedterminal} toggleAriaExpandedebug={toggleAriaExpandedebug} toggleAriaExpandedgit={toggleAriaExpandedgit} toggleAriaExpandedgithub={toggleAriaExpandedgithub} toggleAriaExpandedcodeblocks={toggleAriaExpandedcodeblocks} />
-          </div>
+          <CodeBlocks ariaExpandedisplaycodeblocks={ariaExpandedisplaycodeblocks} />
+          <Terminal ariaExpandedisplayterminal={ariaExpandedisplayterminal} />
+          <Git ariaExpandedisplaygit={ariaExpandedisplaygit} />
+          <Extensions ariaExpandedisplayextensions={ariaExpandedisplayextensions} />
+          <GitHub ariaExpandedisplaygithub={ariaExpandedisplaygithub} />
+          <Debug ariaExpandedisplaydebug={ariaExpandedisplaydebug} />
+          <Search ariaExpandedisplaysearch={ariaExpandedisplaysearch} />
+          <FilePioneer ariaExpandedisplayfilepioneer={ariaExpandedisplayfilepioneer} />
+          <SideBar toggleAriaExpandedfilepioneer={toggleAriaExpandedfilepioneer} toggleAriaExpandedsearch={toggleAriaExpandedsearch} toggleAriaExpandedextensions={toggleAriaExpandedextensions} toggleAriaExpandedterminal={toggleAriaExpandedterminal} toggleAriaExpandedebug={toggleAriaExpandedebug} toggleAriaExpandedgit={toggleAriaExpandedgit} toggleAriaExpandedgithub={toggleAriaExpandedgithub} toggleAriaExpandedcodeblocks={toggleAriaExpandedcodeblocks} />
         </div>
       </div>
       <StatusBar />

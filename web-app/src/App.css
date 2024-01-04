@@ -373,3 +373,26 @@ li {
 .tabClose:hover{
     background-color: rgb(255, 255, 255, 0.4);
 }
+
+#defaultPage{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 92vw;
+    height: 90vh;
+}
+
+.defaultPageSection{
+    height: 45vh;
+}
+
+.shortcutkeys{
+    display: flex;
+    flex-direction: row;
+    margin: 16px;
+}
+
+.shortcutkeysSection{
+
+    width: 15vw;
+}

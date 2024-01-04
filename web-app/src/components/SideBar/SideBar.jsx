@@ -6,11 +6,7 @@ export default function SideBar(props) {
     <>
       <div className="sidebar">
         <div className="iconWrapper">
-          <div
-            id="filepioneer"
-            className="sidebaricons"
-            onClick={props.toggleAriaExpandedfilepioneer}
-          >
+          <div title="File Pioneer (Ctrl + E)" id="filepioneer" className="sidebaricons" onClick={props.toggleAriaExpandedfilepioneer} >
             <i className="fa-regular fa-file fa-xl"></i>
           </div>
           <span className="sidebarIconBar"></span>
