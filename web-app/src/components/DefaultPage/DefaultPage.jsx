@@ -10,18 +10,18 @@ export default function DefaultPage(props) {
                 <div className="defaultPageSection">
                     <div className="shortcutkeys">
                         <div className="shortcutkeysSection">
-                            <span className="shortcutkeys">New File</span><br />
-                            <span className="shortcutkeys">New Folder</span><br />
-                            <span className="shortcutkeys">Open File</span><br />
-                            <span className="shortcutkeys">Open Folder</span><br />
+                            <span className="shortcutkeys">New File</span>
+                            <span className="shortcutkeys">New Folder</span>
+                            <span className="shortcutkeys">Open File</span>
+                            <span className="shortcutkeys">Open Folder</span>
                             <span className="shortcutkeys">Toggle Primary SideBar</span>
                         </div>
                         <div className="shortcutkeysSection">
-                            <span><kbd>Ctrl</kbd> + <kbd>N</kbd><br /></span>
-                            <span><kbd>Ctrl</kbd> + <kbd>N</kbd><br /></span>
-                            <span><kbd>Ctrl</kbd> + <kbd>N</kbd><br /></span>
-                            <span><kbd>Ctrl</kbd> + <kbd>N</kbd><br /></span>
-                            <span><kbd>Ctrl</kbd> + <kbd>N</kbd><br /></span>
+                            <span className="shortcutkeys"><kbd>Ctrl</kbd> + <kbd>N</kbd></span>
+                            <span className="shortcutkeys"><kbd>Ctrl</kbd> + <kbd>N</kbd></span>
+                            <span className="shortcutkeys"><kbd>Ctrl</kbd> + <kbd>N</kbd></span>
+                            <span className="shortcutkeys"><kbd>Ctrl</kbd> + <kbd>N</kbd></span>
+                            <span className="shortcutkeys"><kbd>Ctrl</kbd> + <kbd>N</kbd></span>
                         </div>
                     </div>
                 </div>

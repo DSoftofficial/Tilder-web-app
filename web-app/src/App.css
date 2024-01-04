@@ -389,10 +389,9 @@ li {
 .shortcutkeys{
     display: flex;
     flex-direction: row;
-    margin: 16px;
+    margin-bottom: 10px;
 }
 
 .shortcutkeysSection{
-
     width: 15vw;
 }
