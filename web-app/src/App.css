@@ -190,7 +190,6 @@ li {
 .maincodearea {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 #editorwrapper {
@@ -308,10 +307,7 @@ li {
 }
 
 .welcomePage {
-    flex-direction: initial;
     padding: 2vw;
-    width: 92vw;
-    height: 83.5vh;
     background-color: var(--welcome-page);
 }
 
