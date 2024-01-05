@@ -285,7 +285,7 @@ function App(props) {
         <div className="codewrpr">
           <ReviewBar />
           <div className="maincodearea">
-            <DefaultPage DefaultPageDisplay={DefaultPageDisplay} />
+            <DefaultPage DefaultPageDisplay={DefaultPageDisplay} dimensionsDefaultPage={insidemaincodeareaStyle} />
             <Tabs tabDisplay={TabDisplay} toggleWelcomePagedisplay={toggleWelcomePageDisplay} />
             <MonacoEditor style={insidemaincodeareaStyle} />
             <div className={`welcomePage d-${WelcomePageDisplay}`} style={insidemaincodeareaStyle}>

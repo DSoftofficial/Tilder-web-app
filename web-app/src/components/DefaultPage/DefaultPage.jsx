@@ -3,7 +3,7 @@ import React from 'react'
 export default function DefaultPage(props) {
     return (
         <>
-            <div id="defaultPage" className={`d-${props.DefaultPageDisplay}`}>
+            <div id="defaultPage" className={`d-${props.DefaultPageDisplay}`} style={props.dimensionsDefaultPage}>
                 <div className="defaultPageSection">
                     <img src="/Tilder_icon.png" alt="" />
                 </div>
@@ -18,10 +18,10 @@ export default function DefaultPage(props) {
                         </div>
                         <div className="shortcutkeysSection">
                             <span className="shortcutkeys"><kbd>Ctrl</kbd> + <kbd>N</kbd></span>
-                            <span className="shortcutkeys"><kbd>Ctrl</kbd> + <kbd>N</kbd></span>
-                            <span className="shortcutkeys"><kbd>Ctrl</kbd> + <kbd>N</kbd></span>
-                            <span className="shortcutkeys"><kbd>Ctrl</kbd> + <kbd>N</kbd></span>
-                            <span className="shortcutkeys"><kbd>Ctrl</kbd> + <kbd>N</kbd></span>
+                            <span className="shortcutkeys"><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd></span>
+                            <span className="shortcutkeys"><kbd>Ctrl</kbd> + <kbd>O</kbd></span>
+                            <span className="shortcutkeys"><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd></span>
+                            <span className="shortcutkeys"><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd></span>
                         </div>
                     </div>
                 </div>
