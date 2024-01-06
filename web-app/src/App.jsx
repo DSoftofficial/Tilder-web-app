@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import "./App.css";
 import MenuBar from "./components/MenuBar/MenuBar.jsx";
 import MonacoEditor from "./components/Editor/MonacoEditor.jsx";
@@ -15,8 +15,9 @@ import Debug from "./components/SideBar/Main Components/Debug/Debug.jsx";
 import CodeBlocks from "./components/SideBar/Main Components/Code Blocks/CodeBlocks.jsx";
 import Git from "./components/SideBar/Main Components/Git/Git.jsx";
 import DefaultPage from "./components/DefaultPage/DefaultPage.jsx";
+import WelcomePage from "./components/WelcomePage/WelcomePage.jsx"
 
-function App(props) {
+function App() {
   let [ariaExpandedisplayfilepioneer, changeariaExpandedisplayfilepioneer] = useState('none');
   let [ariaExpandedisplaysearch, changeariaExpandedisplaysearch] = useState('none');
   let [ariaExpandedisplaycodeblocks, changeariaExpandedisplaycodeblocks] = useState('none');
@@ -287,61 +288,8 @@ function App(props) {
           <div className="maincodearea">
             <DefaultPage DefaultPageDisplay={DefaultPageDisplay} dimensionsDefaultPage={insidemaincodeareaStyle} />
             <Tabs tabDisplay={TabDisplay} toggleWelcomePagedisplay={toggleWelcomePageDisplay} />
+            <WelcomePage DimensionsWelcomePage={insidemaincodeareaStyle} WelcomePageDisplay={WelcomePageDisplay} />
             <MonacoEditor style={insidemaincodeareaStyle} />
-            <div className={`welcomePage d-${WelcomePageDisplay}`} style={insidemaincodeareaStyle}>
-              <div className="welcomePageSection">
-                <h1>Welcome back to Tilder!</h1>
-                <p>Code like a pro!</p>
-              </div>
-              <div className="welcomePageSection">
-                <h2>Quick Links</h2>
-                <div id="importantLinks">
-                  <a href="https://github.com" className="linkto" target="_blank">
-                    <div className="link">
-                      <div className="link-icon">
-                        <i className="fa-brands fa-github fa-2xl"></i>
-                      </div>
-                      <div className="link-content">
-                        <h4>Github</h4>
-                        <p>Host your code!</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="https://www.youtube.com" className="linkto" target="_blank">
-                    <div className="link">
-                      <div className="link-icon">
-                        <i className="fa-brands fa-youtube fa-2xl"></i>
-                      </div>
-                      <div className="link-content">
-                        <h4>Youtube</h4>
-                        <p>Watch Videos!</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="" className="linkto" target="_blank">
-                    <div className="link">
-                      <div className="link-icon">
-                      </div>
-                      <div className="link-content">
-                        <h4>DSoft</h4>
-                        <p>Explore our other products.</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="https://stackoverflow.com" className="linkto" target="_blank">
-                    <div className="link">
-                      <div className="link-icon">
-                        <i className="fa-brands fa-stack-overflow fa-2xl"></i>
-                      </div>
-                      <div className="link-content">
-                        <h4>Stack Overflow</h4>
-                        <p>Fix your problem!</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
         <div className="SideBarmainwrper">
