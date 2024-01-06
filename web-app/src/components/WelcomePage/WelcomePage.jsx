@@ -2,7 +2,7 @@ import React from 'react'
 
 function welcomePage(props) {
     return (
-        <div className={`welcomePage d-${props.WelcomePageDisplay}`} DimensionsWelcomePage={props.insidemaincodeareaStyle}>
+        <div className={`welcomePage d-${props.WelcomePageDisplay}`} style={props.DimensionsWelcomePage}>
             <div className="welcomePageSection">
                 <h1>Welcome back to Tilder!</h1>
                 <p>Code like a pro!</p>
