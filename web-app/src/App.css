@@ -21,11 +21,13 @@ body {
 }
 
 nav {
+    display: flex;
     width: auto;
     height: 4vh;
-    display: flex;
+    flex-direction: row;
     background: var(--main-bg-color);
     align-items: center;
+    justify-content: space-between;
     padding: 12px;
     border-radius: 12px;
     margin: 5px;
@@ -58,6 +60,16 @@ li {
     justify-content: center;
     align-items: center;
     padding: 0 19px;
+}
+
+#sidebarControls{
+    display: flex;
+    align-items: center;
+}
+
+#sidebarSettings{
+    display: flex;
+    align-items: center;
 }
 
 .dropdown-trigger-btn {
@@ -307,6 +319,7 @@ li {
 }
 
 .welcomePage {
+    width: 92vw;
     padding: 2vw;
     background-color: var(--welcome-page);
 }
