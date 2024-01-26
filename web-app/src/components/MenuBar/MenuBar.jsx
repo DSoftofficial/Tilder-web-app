@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function MenuBar(props) {
   function filePicker() {
@@ -83,7 +82,7 @@ function MenuBar(props) {
                   <li>Toggle Line Comment</li>
                   <li>Toggle Block Comment</li>
                   <hr className="dropdowncontent-hr" />
-                  <li>Emmet: Expand Abbreviation</li>
+                  <li>Lligence: Expand Abbreviation</li>
                 </div>
               </div>
               <div className="dropdown">
@@ -179,11 +178,14 @@ function MenuBar(props) {
             </div>
           </div>
           <div id="sidebarSettings">
-            <span className="dropdown-trigger-btn">
-              <i class="fa-solid fa-sliders"></i>
+            <span className="dropdown-trigger-btn" onClick={props.toggleInfoDisplay}>
+              <i className="fa-solid fa-circle-info"></i>
             </span>
             <span className="dropdown-trigger-btn">
-              <i class="fa-regular fa-user"></i>
+              <i className="fa-solid fa-sliders"></i>
+            </span>
+            <span className="dropdown-trigger-btn">
+              <i className="fa-regular fa-user"></i>
             </span>
           </div>
         </nav>
