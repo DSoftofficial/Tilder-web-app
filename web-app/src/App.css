@@ -444,6 +444,6 @@ li {
     border-radius: 4px;
     background: radial-gradient(rgb(124 36 213), rgb(61 0 122));
     opacity: 0.8;
-    color: #c7c7c7;
+    color: #fff;
     min-width: 10vw;
 }
