@@ -209,6 +209,8 @@ li {
 }
 
 #editorwrapper {
+    width: 92vw;
+    height: 80vh;
     display: flex;
 }
 
