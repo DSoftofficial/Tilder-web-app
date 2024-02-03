@@ -447,3 +447,5 @@ li {
     color: #fff;
     min-width: 10vw;
 }
+
+.editor-wrapper .monaco-editor, .editor-wrapper .overflow-guard { border-radius: 10px; }
