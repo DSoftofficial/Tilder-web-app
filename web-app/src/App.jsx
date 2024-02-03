@@ -29,7 +29,7 @@ function App() {
   let [ariaExpandedisplayterminal, changeariaExpandedisplayterminal] = useState('none');
   let [InfoDisplay, setInfoDisplay] = useState('none')
   let [TabDisplay, setTabDisplay] = useState('flex')
-  let [WelcomePageDisplay, setWelcomePageDisplay] = useState('flex')
+  let [WelcomePageDisplay, setWelcomePageDisplay] = useState('none')
   let [DefaultPageDisplay, setDefaultPageDisplay] = useState('none')
   const [bgOpacityDisplay, setBgOpacityDisplay] = useState('none')
   const toggleWelcomePageDisplay = () => {
