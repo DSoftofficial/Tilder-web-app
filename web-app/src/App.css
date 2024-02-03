@@ -209,7 +209,7 @@ li {
 }
 
 #editorwrapper {
-    display: none;
+    display: flex;
 }
 
 .reviewbarwrapper {
