@@ -13,7 +13,6 @@ Tilder web app is a lightweight code editor that helps us to code efficiently & 
 ---
 
 **Framework**
----
 
 ![React](https://img.shields.io/badge/React-grey?style=for-the-badge&logo=react)
 
