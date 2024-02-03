@@ -209,9 +209,7 @@ li {
 }
 
 #editorwrapper {
-    width: 92vw;
-    height: 80vh;
-    display: flex;
+    display: none;
 }
 
 .reviewbarwrapper {
@@ -450,4 +448,6 @@ li {
     min-width: 10vw;
 }
 
-.editor-wrapper .monaco-editor, .editor-wrapper .overflow-guard { border-radius: 10px; }
+.overflow-guard{
+    border-radius: 10px;
+}
