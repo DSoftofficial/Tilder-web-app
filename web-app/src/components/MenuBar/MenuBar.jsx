@@ -35,7 +35,7 @@ function MenuBar(props) {
                     <li aria-label="">New Tab</li>
                     <hr className="dropdowncontent-hr" />
                     <p className="form">
-                      <label className="add-photo-btn">Open File<input type="file" id="myfile" name="myfile" onChange={props.handleFileChange}/>
+                      <label className="add-photo-btn">Open File<input type="file" id="myfile" name="myfile" onChange={props.handleFileChange} />
                       </label>
                     </p>
                     <li aria-label="">Open Folder</li>

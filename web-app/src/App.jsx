@@ -305,6 +305,12 @@ function App() {
     setInfoDisplay('none')
     setBgOpacityDisplay('none')
   }
+
+  const triggerOpenFile = () => {
+    setWelcomePageDisplay('none');
+    setMonacoEditorDisplay('flex');
+  }
+
   const handleFileChange = (event) => {
     if (event.target.files) {
       setFile(event.target.files[0]);
@@ -313,6 +319,7 @@ function App() {
 
   useEffect(() => {
     if (file) {
+      triggerOpenFile()
       var reader = new FileReader();
       reader.onload = async (e) => {
         setCode(e.target.result);
