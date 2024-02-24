@@ -13,7 +13,9 @@
     --a-hover: rgb(201, 201, 201);
     --tab-bg-color: rgb(42 8 81);
     --body-main-bg-color: rgb(10, 4, 17);
-    --welcome-page: rgb(16, 0, 36);   
+    --welcome-page: rgb(16, 0, 36);
+    --fa-primary-color: rgb(25, 168, 216);
+    --dialogue-color: rgb(111, 0, 201);
 }
 
 body {
@@ -21,6 +23,8 @@ body {
 }
 
 nav {
+    position: relative;
+    z-index: 10;
     display: flex;
     width: auto;
     height: 4vh;
@@ -62,12 +66,12 @@ li {
     padding: 0 19px;
 }
 
-#sidebarControls{
+#sidebarControls {
     display: flex;
     align-items: center;
 }
 
-#sidebarSettings{
+#sidebarSettings {
     display: flex;
     align-items: center;
 }
@@ -204,12 +208,13 @@ li {
     flex-direction: column;
 }
 
-#mainProductivityArea{
+#mainProductivityArea {
     overflow: hidden;
 }
 
-#editorwrapper {
-    display: none;
+#editor-wrapper {
+    position: absolute;
+    z-index: 5;
 }
 
 .reviewbarwrapper {
@@ -334,7 +339,7 @@ li {
     z-index: 3;
 }
 
-#importantLinks{
+#importantLinks {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -344,7 +349,7 @@ li {
     border-radius: 12px;
 }
 
-.link{
+.link {
     display: flex;
     flex-direction: row;
     width: 31vw;
@@ -355,21 +360,21 @@ li {
     padding: 14px;
 }
 
-.link:hover{
+.link:hover {
     background: linear-gradient(223deg, #2200a9, transparent);
 }
 
-.link-icon{
+.link-icon {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.link-content{
+.link-content {
     margin-left: 1vw;
 }
 
-.tabClose{
+.tabClose {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -383,11 +388,11 @@ li {
     border-radius: 5px;
 }
 
-.tabClose:hover{
+.tabClose:hover {
     background-color: rgb(255, 255, 255, 0.4);
 }
 
-#defaultPage{
+#defaultPage {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -395,50 +400,50 @@ li {
     height: 90vh;
 }
 
-.defaultPageSection{
+.defaultPageSection {
     height: 45vh;
 }
 
-.shortcutkeys{
+.shortcutkeys {
     display: flex;
     flex-direction: row;
     margin-bottom: 10px;
 }
 
-.shortcutkeysSection{
+.shortcutkeysSection {
     width: 15vw;
 }
 
-#infowrpr{
+#infowrpr {
     background-color: rgba(255, 255, 255, 0.329);
     position: absolute;
-    z-index: 6;
+    z-index: 11;
     width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
 }
 
-#info{
+#info {
     border-radius: 5px;
     position: absolute;
-    z-index: 8;
+    z-index: 11;
     width: 24vw;
     height: auto;
     background-color: var(--content-box-bg-color);
 }
 
 
-#infoClose{
+#infoClose {
     display: flex;
     justify-content: flex-end;
 }
 
-.infoSection{
+.infoSection {
     padding: 8px;
 }
 
-.btn-normal{
+.btn-normal {
     outline: none;
     border: none;
     border-radius: 4px;
@@ -448,6 +453,55 @@ li {
     min-width: 10vw;
 }
 
-.overflow-guard{
+.monaco-editor .overflow-guard {
     border-radius: 10px;
+}
+
+.form input[type="file"] {
+    display: none;
+}
+
+input[type="text"] {
+    display: none;
+}
+
+#greetings {
+    height: 36.9vh;
+}
+
+#quick-file-management {
+    height: calc(83.5vh - 36.9vh);
+}
+
+.file-options:hover {
+    cursor: pointer;
+    color: rgb(27, 130, 165);
+}
+
+.fa-file-circle-plus {
+    color: var(--fa-primary-color);
+}
+
+#mainCodeNavigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+#newfilewrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 92vw;
+    height: 83.5vh;
+}
+
+#newFile {
+    display: flex;
+    background-color: var(--dialogue-color);
+    position: absolute;
+    z-index: 7;
+    width: 36vw;
+    height: 74vh;
+    border-radius: 12px;
+    padding: 50px;
 }

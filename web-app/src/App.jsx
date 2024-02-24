@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./App.css";
 import MenuBar from "./components/MenuBar/MenuBar.jsx";
 import MonacoEditor from "./components/Editor/MonacoEditor.jsx";
@@ -15,8 +15,9 @@ import Debug from "./components/SideBar/Main Components/Debug/Debug.jsx";
 import CodeBlocks from "./components/SideBar/Main Components/Code Blocks/CodeBlocks.jsx";
 import Git from "./components/SideBar/Main Components/Git/Git.jsx";
 import DefaultPage from "./components/DefaultPage/DefaultPage.jsx";
-import WelcomePage from "./components/WelcomePage/WelcomePage.jsx"
+import WelcomePage from "./components/WelcomePage/WelcomePage.jsx";
 import Info from './components/Info/Info.jsx';
+import NewFile from './components/NewFile/NewFile.jsx';
 
 function App() {
   let [ariaExpandedisplayfilepioneer, changeariaExpandedisplayfilepioneer] = useState('none');
@@ -27,11 +28,16 @@ function App() {
   let [ariaExpandedisplaygit, changeariaExpandedisplaygit] = useState('none');
   let [ariaExpandedisplaygithub, changeariaExpandedisplaygithub] = useState('none');
   let [ariaExpandedisplayterminal, changeariaExpandedisplayterminal] = useState('none');
-  let [InfoDisplay, setInfoDisplay] = useState('none')
-  let [TabDisplay, setTabDisplay] = useState('flex')
-  let [WelcomePageDisplay, setWelcomePageDisplay] = useState('flex')
-  let [DefaultPageDisplay, setDefaultPageDisplay] = useState('none')
-  const [bgOpacityDisplay, setBgOpacityDisplay] = useState('none')
+  let [InfoDisplay, setInfoDisplay] = useState('none');
+  let [TabDisplay, setTabDisplay] = useState('flex');
+  let [WelcomePageDisplay, setWelcomePageDisplay] = useState('flex');
+  let [DefaultPageDisplay, setDefaultPageDisplay] = useState('none');
+  let [MonacoEditorDisplay, setMonacoEditorDisplay] = useState('none');
+  let [bgOpacityDisplay, setBgOpacityDisplay] = useState('none');
+  let [NewFileVisibility, setNewFileVisibility] = useState('none')
+  let [code, setCode] = useState('');
+  let [file, setFile] = useState();
+  let [language, setLanguage] = useState('python');
   const toggleWelcomePageDisplay = () => {
     console.log("clicked");
     setDefaultPageDisplay('flex')
@@ -50,7 +56,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      changeinsidemaincodeareaStyle({
+      changeMaincodeAreaStyle({
         width: '72vw',
       })
     }
@@ -63,7 +69,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      changeinsidemaincodeareaStyle({
+      changeMaincodeAreaStyle({
         width: '92vw',
       })
     }
@@ -80,7 +86,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      changeinsidemaincodeareaStyle({
+      changeMaincodeAreaStyle({
         width: '72vw',
       })
     }
@@ -93,7 +99,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      changeinsidemaincodeareaStyle({
+      changeMaincodeAreaStyle({
         width: '92vw',
       })
     }
@@ -110,7 +116,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      changeinsidemaincodeareaStyle({
+      changeMaincodeAreaStyle({
         width: '72vw',
       })
     }
@@ -123,7 +129,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      changeinsidemaincodeareaStyle({
+      changeMaincodeAreaStyle({
         width: '92vw',
       })
     }
@@ -140,7 +146,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("flex");
       changeariaExpandedisplayterminal("none");
-      changeinsidemaincodeareaStyle({
+      changeMaincodeAreaStyle({
         width: '72vw',
       })
     }
@@ -153,7 +159,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      changeinsidemaincodeareaStyle({
+      changeMaincodeAreaStyle({
         width: '92vw',
       })
     }
@@ -170,7 +176,7 @@ function App() {
       changeariaExpandedisplaygit("flex");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      changeinsidemaincodeareaStyle({
+      changeMaincodeAreaStyle({
         width: '72vw',
       })
     }
@@ -183,7 +189,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      changeinsidemaincodeareaStyle({
+      changeMaincodeAreaStyle({
         width: '92vw',
       })
     }
@@ -200,7 +206,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      changeinsidemaincodeareaStyle({
+      changeMaincodeAreaStyle({
         width: '72vw',
       })
     }
@@ -213,7 +219,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      changeinsidemaincodeareaStyle({
+      changeMaincodeAreaStyle({
         width: '92vw',
       })
     }
@@ -230,7 +236,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("flex");
-      changeinsidemaincodeareaStyle({
+      changeMaincodeAreaStyle({
         width: '72vw',
       })
     }
@@ -243,7 +249,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      changeinsidemaincodeareaStyle({
+      changeMaincodeAreaStyle({
         width: '92vw',
       })
     }
@@ -260,7 +266,7 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      changeinsidemaincodeareaStyle({
+      changeMaincodeAreaStyle({
         width: '72vw',
       })
     }
@@ -273,12 +279,19 @@ function App() {
       changeariaExpandedisplaygit("none");
       changeariaExpandedisplaygithub("none");
       changeariaExpandedisplayterminal("none");
-      changeinsidemaincodeareaStyle({
+      changeMaincodeAreaStyle({
         width: '92vw',
       })
     }
   };
-  const [insidemaincodeareaStyle, changeinsidemaincodeareaStyle] = useState({
+
+  const [monacoEditorStyle, setMonacoEditorStyle] = useState({
+    width: '92vw',
+    height: '83.5vh',
+    opacity: '1'
+  })
+
+  let [maincodeareaStyle, changeMaincodeAreaStyle] = useState({
     width: '92vw',
     height: '83.5vh'
   })
@@ -289,24 +302,60 @@ function App() {
   }
 
   const triggerInfoClose = () => {
-    console.log("toggled")
     setInfoDisplay('none')
     setBgOpacityDisplay('none')
+  }
+  const handleFileChange = (event) => {
+    if (event.target.files) {
+      setFile(event.target.files[0]);
+    }
+  };
+
+  useEffect(() => {
+    if (file) {
+      var reader = new FileReader();
+      reader.onload = async (e) => {
+        setCode(e.target.result);
+      };
+      reader.readAsText(file);
+      let newLanguage = 'python';
+      const extension = file.name.split('.').pop();
+      if (['css', 'html', 'py', 'dart', 'js', 'java', 'go', 'asm', 'webmanifest', 'txt', 'bat', 'bibtext', 'c', 'cpp', 'cs', 'dart', 'hsl', 'fsharp', 'clojure', 'groovy', 'ini', 'tsx', 'jsx', 'powershell'].includes(extension)) {
+        newLanguage = extension;
+      }
+      setLanguage(newLanguage);
+      console.log(extension);
+      console.log(newLanguage);
+    }
+  }, [file]);
+
+  const triggerNewFile = () => {
+    setWelcomePageDisplay('none');
+    setMonacoEditorDisplay('flex');
+    setNewFileVisibility('flex')
+    setMonacoEditorStyle({
+      width: '92vw',
+      height: '83.5vh',
+      opacity: '0.5'
+    })
   }
 
   return (
     <>
-      <Info triggerInfoClose={triggerInfoClose} InfoDisplay={InfoDisplay} bgOpacityDisplay={bgOpacityDisplay} />
+      <Info triggerInfoClose={triggerInfoClose} InfoDisplay={InfoDisplay} />
       <div id="mainProductivityArea">
-        <MenuBar toggleInfoDisplay={toggleInfoDisplay} />
+        <MenuBar toggleInfoDisplay={toggleInfoDisplay} handleFileChange={handleFileChange} />
         <div className="mainsect">
           <div className="codewrpr">
             <ReviewBar />
-            <div className="maincodearea">
-              <DefaultPage DefaultPageDisplay={DefaultPageDisplay} dimensionsDefaultPage={insidemaincodeareaStyle} />
+            <div className="maincodearea" style={maincodeareaStyle}>
+              <DefaultPage DefaultPageDisplay={DefaultPageDisplay} dimensionsDefaultPage={maincodeareaStyle} />
               <Tabs tabDisplay={TabDisplay} toggleWelcomePagedisplay={toggleWelcomePageDisplay} />
-              <WelcomePage DimensionsWelcomePage={insidemaincodeareaStyle} WelcomePageDisplay={WelcomePageDisplay} />
-              <MonacoEditor style={insidemaincodeareaStyle} />
+              <WelcomePage DimensionsWelcomePage={maincodeareaStyle} WelcomePageDisplay={WelcomePageDisplay} triggerNewFile={triggerNewFile} />
+              <div id="mainCodeNavigation">
+                <NewFile triggerNewFile={triggerNewFile} NewFileVisibility={NewFileVisibility} />
+                <MonacoEditor monacoEditorStyle={monacoEditorStyle} code={code} language={language} MonacoEditorDisplay={MonacoEditorDisplay} />
+              </div>
             </div>
           </div>
           <div className="SideBarmainwrper">

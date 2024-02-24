@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 function MenuBar(props) {
-  function filePicker() {
-    let input = document.createElement("input");
-    input.type = "file";
-    input.click();
-  }
+  // function filePicker() {
+  //   let input = document.createElement("input");
+  //   input.type = "file";
+  //   input.click();
+  // }
+
   function quit() {
     window.close();
   }
@@ -33,9 +34,10 @@ function MenuBar(props) {
                     <li aria-label="">New Window</li>
                     <li aria-label="">New Tab</li>
                     <hr className="dropdowncontent-hr" />
-                    <li onClick={filePicker} aria-label="">
-                      Open File
-                    </li>
+                    <p className="form">
+                      <label className="add-photo-btn">Open File<input type="file" id="myfile" name="myfile" onChange={props.handleFileChange}/>
+                      </label>
+                    </p>
                     <li aria-label="">Open Folder</li>
                     <div className="subdropdown">
                       <li>Open Recent</li>

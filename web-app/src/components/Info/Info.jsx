@@ -2,7 +2,7 @@ import moment from 'moment'
 import React from 'react'
 
 export default function Info(props) {
-    // console.log(import.meta.env.VITE_REACT_APP_VERSION) // *test purposes
+    // console.log(import.meta.env.VITE_REACT_APP_VERSION) // **test purposes**
     return (
         <>
             <div id="infowrpr" className={`d-${props.InfoDisplay}`} onClick={props.triggerInfoClose}>
