@@ -59,6 +59,9 @@ function App() {
       changeMaincodeAreaStyle({
         width: '72vw',
       })
+      setMonacoEditorStyle({
+        width: '72vw'
+      })
     }
     else {
       changeariaExpandedisplayfilepioneer("none");
@@ -71,6 +74,9 @@ function App() {
       changeariaExpandedisplayterminal("none");
       changeMaincodeAreaStyle({
         width: '92vw',
+      })
+      setMonacoEditorStyle({
+        width: '92vw'
       })
     }
   };
@@ -89,6 +95,9 @@ function App() {
       changeMaincodeAreaStyle({
         width: '72vw',
       })
+      setMonacoEditorStyle({
+        width: '72vw'
+      })
     }
     else {
       changeariaExpandedisplaysearch("none");
@@ -101,6 +110,9 @@ function App() {
       changeariaExpandedisplayterminal("none");
       changeMaincodeAreaStyle({
         width: '92vw',
+      })
+      setMonacoEditorStyle({
+        width: '92vw'
       })
     }
   };
@@ -119,6 +131,9 @@ function App() {
       changeMaincodeAreaStyle({
         width: '72vw',
       })
+      setMonacoEditorStyle({
+        width: '72vw'
+      })
     }
     else {
       changeariaExpandedisplaysearch("none");
@@ -131,6 +146,9 @@ function App() {
       changeariaExpandedisplayterminal("none");
       changeMaincodeAreaStyle({
         width: '92vw',
+      })
+      setMonacoEditorStyle({
+        width: '92vw'
       })
     }
   };
@@ -149,6 +167,9 @@ function App() {
       changeMaincodeAreaStyle({
         width: '72vw',
       })
+      setMonacoEditorStyle({
+        width: '72vw'
+      })
     }
     else {
       changeariaExpandedisplaysearch("none");
@@ -161,6 +182,9 @@ function App() {
       changeariaExpandedisplayterminal("none");
       changeMaincodeAreaStyle({
         width: '92vw',
+      })
+      setMonacoEditorStyle({
+        width: '92vw'
       })
     }
   };
@@ -179,6 +203,9 @@ function App() {
       changeMaincodeAreaStyle({
         width: '72vw',
       })
+      setMonacoEditorStyle({
+        width: '72vw'
+      })
     }
     else {
       changeariaExpandedisplaysearch("none");
@@ -191,6 +218,9 @@ function App() {
       changeariaExpandedisplayterminal("none");
       changeMaincodeAreaStyle({
         width: '92vw',
+      })
+      setMonacoEditorStyle({
+        width: '92vw'
       })
     }
   };
@@ -209,6 +239,9 @@ function App() {
       changeMaincodeAreaStyle({
         width: '72vw',
       })
+      setMonacoEditorStyle({
+        width: '72vw'
+      })
     }
     else {
       changeariaExpandedisplaysearch("none");
@@ -221,6 +254,9 @@ function App() {
       changeariaExpandedisplayterminal("none");
       changeMaincodeAreaStyle({
         width: '92vw',
+      })
+      setMonacoEditorStyle({
+        width: '92vw'
       })
     }
   };
@@ -239,6 +275,9 @@ function App() {
       changeMaincodeAreaStyle({
         width: '72vw',
       })
+      setMonacoEditorStyle({
+        width: '72vw'
+      })
     }
     else {
       changeariaExpandedisplaysearch("none");
@@ -251,6 +290,9 @@ function App() {
       changeariaExpandedisplayterminal("none");
       changeMaincodeAreaStyle({
         width: '92vw',
+      })
+      setMonacoEditorStyle({
+        width: '92vw'
       })
     }
   };
@@ -269,6 +311,9 @@ function App() {
       changeMaincodeAreaStyle({
         width: '72vw',
       })
+      setMonacoEditorStyle({
+        width: '72vw'
+      })
     }
     else {
       changeariaExpandedisplaysearch("none");
@@ -281,6 +326,9 @@ function App() {
       changeariaExpandedisplayterminal("none");
       changeMaincodeAreaStyle({
         width: '92vw',
+      })
+      setMonacoEditorStyle({
+        width: '92vw'
       })
     }
   };
