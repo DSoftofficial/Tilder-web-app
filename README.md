@@ -3,7 +3,7 @@ Tilder web app is a lightweight code editor that helps us to code efficiently & 
 
 ![image](https://github.com/DSoftofficial/Tilder-web-app/assets/108980710/f9acc8f2-938b-4faa-989b-7c80a6ed6ba0)
 
-![Static Badge](https://img.shields.io/badge/render-live-blue)
+[<img src="https://img.shields.io/badge/render-live-blue">](tildercode.onrender.com)
 
 **Languages**
 
