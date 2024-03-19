@@ -12,7 +12,6 @@ function MonacoEditor(props) {
         minimap: {enabled: true},
         wordWrapColumn: 82 
     };
-
     return (
         <>
             <div id="editor-wrapper" style={props.monacoEditorStyle} className={`d-${props.MonacoEditorDisplay}`}>

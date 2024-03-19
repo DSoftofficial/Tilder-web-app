@@ -298,9 +298,8 @@ li {
 }
 
 .tabswrapper {
-    display: flex;
     width: auto;
-    height: auto;
+    height: 5vh;
     flex-direction: row;
     align-items: center;
     margin-bottom: 4px;
@@ -308,7 +307,6 @@ li {
 }
 
 .tab {
-    display: flex;
     background-color: var(--tab-bg-color);
     justify-content: center;
     align-items: center;
@@ -321,6 +319,25 @@ li {
 
 .tab:hover {
     background-color: var(--main-bg-color);
+}
+
+.tabClose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(8px);
+    cursor: pointer;
+    width: 1.5pc;
+    height: 1.5pc;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-radius: 5px;
+    float: right;
+}
+
+.tabClose:hover {
+    background-color: rgb(255, 255, 255, 0.4);
 }
 
 .fa-xmark {
@@ -372,24 +389,6 @@ li {
 
 .link-content {
     margin-left: 1vw;
-}
-
-.tabClose {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(8px);
-    cursor: pointer;
-    width: 1.5pc;
-    height: 1.5pc;
-    outline: none;
-    border: none;
-    background-color: transparent;
-    border-radius: 5px;
-}
-
-.tabClose:hover {
-    background-color: rgb(255, 255, 255, 0.4);
 }
 
 #defaultPage {

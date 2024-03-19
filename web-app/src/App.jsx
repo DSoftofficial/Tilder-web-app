@@ -19,17 +19,18 @@ import WelcomePage from "./components/WelcomePage/WelcomePage.jsx";
 import Info from './components/Info/Info.jsx';
 import NewFile from './components/NewFile/NewFile.jsx';
 
-function App() {
+function App(props) {
   let [ariaExpandedisplayfilepioneer, changeariaExpandedisplayfilepioneer] = useState('none');
   let [ariaExpandedisplaysearch, changeariaExpandedisplaysearch] = useState('none');
   let [ariaExpandedisplaycodeblocks, changeariaExpandedisplaycodeblocks] = useState('none');
   let [ariaExpandedisplaydebug, changeariaExpandedisplaydebug] = useState('none');
   let [ariaExpandedisplayextensions, changeariaExpandedisplayextensions] = useState('none');
   let [ariaExpandedisplaygit, changeariaExpandedisplaygit] = useState('none');
-  let [ariaExpandedisplaygithub, changeariaExpandedisplaygithub] = useState('none');
   let [ariaExpandedisplayterminal, changeariaExpandedisplayterminal] = useState('none');
+  let [ariaExpandedisplaygithub, changeariaExpandedisplaygithub] = useState('none');
   let [InfoDisplay, setInfoDisplay] = useState('none');
   let [TabDisplay, setTabDisplay] = useState('flex');
+  let [WelcomeTabDisplay, setWelcomeTabDisplay] = useState('flex');
   let [WelcomePageDisplay, setWelcomePageDisplay] = useState('flex');
   let [DefaultPageDisplay, setDefaultPageDisplay] = useState('none');
   let [MonacoEditorDisplay, setMonacoEditorDisplay] = useState('none');
@@ -38,10 +39,10 @@ function App() {
   let [code, setCode] = useState('');
   let [file, setFile] = useState();
   let [language, setLanguage] = useState('python');
+  const [TabsWrapperDisplay, setTabsWrapperDisplay] = useState('flex');
   const toggleWelcomePageDisplay = () => {
-    console.log("clicked");
-    setDefaultPageDisplay('flex')
-    setTabDisplay('none');
+    setDefaultPageDisplay('flex');
+    setTabsWrapperDisplay('none')
     setWelcomePageDisplay('none');
   };
   const toggleAriaExpandedfilepioneer = () => {
@@ -297,7 +298,6 @@ function App() {
     }
   };
   const toggleAriaExpandedextensions = () => {
-    console.log("clicked");
     if (ariaExpandedisplayextensions === "none") {
       // console.log("toggled")
       changeariaExpandedisplaysearch("none");
@@ -355,9 +355,20 @@ function App() {
   }
 
   const triggerOpenFile = () => {
+    setDefaultPageDisplay('none')
     setWelcomePageDisplay('none');
     setMonacoEditorDisplay('flex');
+    setWelcomeTabDisplay('none');
+    setTabsWrapperDisplay('flex');
   }
+
+  // State to keep track of the number of divs
+  const [tabCount, setTabCount] = useState(0);
+
+  // Function to add a new div
+  const addTab = () => {
+    setTabCount(tabCount + 1);
+  };
 
   const handleFileChange = (event) => {
     if (event.target.files) {
@@ -367,7 +378,9 @@ function App() {
 
   useEffect(() => {
     if (file) {
+      // monacoRef.current?.editor.setModel(monaco.editor.createModel(new TextDecoder().decode(readFileSync(file.path)), file.type));
       triggerOpenFile()
+      addTab();
       var reader = new FileReader();
       reader.onload = async (e) => {
         setCode(e.target.result);
@@ -384,7 +397,15 @@ function App() {
     }
   }, [file]);
 
+  let fileName = file // default name of the file, will be overwritten when a real file is selected
+  if (!!fileName && !!file?.name) {
+    fileName = `${file.name}`;
+  }
+
   const triggerNewFile = () => {
+    setTabsWrapperDisplay('flex');
+    setWelcomeTabDisplay('none');
+    setDefaultPageDisplay('none');
     setWelcomePageDisplay('none');
     setMonacoEditorDisplay('flex');
     setNewFileVisibility('flex')
@@ -395,18 +416,19 @@ function App() {
     })
   }
 
+
   return (
     <>
       <Info triggerInfoClose={triggerInfoClose} InfoDisplay={InfoDisplay} />
       <div id="mainProductivityArea">
-        <MenuBar toggleInfoDisplay={toggleInfoDisplay} handleFileChange={handleFileChange} />
+        <MenuBar toggleInfoDisplay={toggleInfoDisplay} handleFileChange={handleFileChange} triggerNewFile={triggerNewFile} />
         <div className="mainsect">
           <div className="codewrpr">
             <ReviewBar />
             <div className="maincodearea" style={maincodeareaStyle}>
               <DefaultPage DefaultPageDisplay={DefaultPageDisplay} dimensionsDefaultPage={maincodeareaStyle} />
-              <Tabs tabDisplay={TabDisplay} toggleWelcomePagedisplay={toggleWelcomePageDisplay} />
-              <WelcomePage DimensionsWelcomePage={maincodeareaStyle} WelcomePageDisplay={WelcomePageDisplay} triggerNewFile={triggerNewFile} />
+              <Tabs TabDisplay={TabDisplay} WelcomeTabDisplay={WelcomeTabDisplay} toggleWelcomePagedisplay={toggleWelcomePageDisplay} TabsWrapperDisplay={TabsWrapperDisplay} fileName={fileName} tabCount={tabCount} />
+              <WelcomePage DimensionsWelcomePage={maincodeareaStyle} WelcomePageDisplay={WelcomePageDisplay} triggerNewFile={triggerNewFile} handleFileChange={handleFileChange} />
               <div id="mainCodeNavigation">
                 <NewFile triggerNewFile={triggerNewFile} NewFileVisibility={NewFileVisibility} />
                 <MonacoEditor monacoEditorStyle={monacoEditorStyle} code={code} language={language} MonacoEditorDisplay={MonacoEditorDisplay} />

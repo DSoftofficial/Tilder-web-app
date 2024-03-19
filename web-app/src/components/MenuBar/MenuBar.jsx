@@ -2,12 +2,6 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 function MenuBar(props) {
-  // function filePicker() {
-  //   let input = document.createElement("input");
-  //   input.type = "file";
-  //   input.click();
-  // }
-
   function quit() {
     window.close();
   }
