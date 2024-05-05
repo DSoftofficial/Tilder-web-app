@@ -254,8 +254,7 @@ li {
 .sidebarIconBar {
     float: right;
     background-color: whitesmoke;
-    width: fit-content;
-    padding: 1vw;
+    width: 2px;
     height: 2pc;
     visibility: hidden;
 }
@@ -311,7 +310,8 @@ li {
     background-color: var(--tab-bg-color);
     justify-content: center;
     align-items: center;
-    width: 10vw;
+    width: fit-content;
+    padding: 1vw;
     height: 5vh;
     border-radius: 4px;
     margin-right: 8px;
