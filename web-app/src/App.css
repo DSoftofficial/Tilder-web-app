@@ -254,7 +254,8 @@ li {
 .sidebarIconBar {
     float: right;
     background-color: whitesmoke;
-    width: 2px;
+    width: fit-content;
+    padding: 1vw;
     height: 2pc;
     visibility: hidden;
 }
