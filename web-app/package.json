@@ -1,8 +1,7 @@
 {
-  "homepage": "https://DSoftofficial.github.io/Tilder-web-app",
   "name": "web-app",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",

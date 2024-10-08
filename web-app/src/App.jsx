@@ -408,7 +408,7 @@ function App(props) {
     setDefaultPageDisplay('none');
     setWelcomePageDisplay('none');
     setMonacoEditorDisplay('flex');
-    setNewFileVisibility('flex')
+    setNewFileVisibility('block')
     setMonacoEditorStyle({
       width: '92vw',
       height: '83.5vh',

@@ -23,7 +23,7 @@ function MenuBar(props) {
                 <span className="dropdown-trigger-btn">{props.file}</span>
                 <div className="dropdown-content">
                   <ul>
-                    <li aria-label="New File (Ctrl + N)">New File</li>
+                    <li aria-label="New File (Ctrl + N)" onClick={props.triggerNewFile}>New File</li>
                     <li aria-label="">New Folder</li>
                     <li aria-label="">New Window</li>
                     <li aria-label="">New Tab</li>

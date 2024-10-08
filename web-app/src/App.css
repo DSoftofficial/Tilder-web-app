@@ -11,11 +11,12 @@
     --sidebar-icons-hover: rgb(46, 5, 90);
     --li-hover: rgb(201, 201, 201);
     --a-hover: rgb(201, 201, 201);
-    --tab-bg-color: rgb(42 8 81);
+    --tab-bg-color: rgb(42, 8, 81);
     --body-main-bg-color: rgb(10, 4, 17);
     --welcome-page: rgb(16, 0, 36);
     --fa-primary-color: rgb(25, 168, 216);
     --dialogue-color: rgb(111, 0, 201);
+    --dialogue-border-color: 3px solid rgb(25, 25, 113);
 }
 
 body {
@@ -204,8 +205,7 @@ li {
 }
 
 .maincodearea {
-    display: flex;
-    flex-direction: column;
+    display: block;
 }
 
 #mainProductivityArea {
@@ -310,8 +310,7 @@ li {
     background-color: var(--tab-bg-color);
     justify-content: center;
     align-items: center;
-    width: fit-content;
-    padding: 1vw;
+    width: 10vw;
     height: 5vh;
     border-radius: 4px;
     margin-right: 8px;
@@ -496,12 +495,42 @@ input[type="text"] {
 }
 
 #newFile {
-    display: flex;
-    background-color: var(--dialogue-color);
+    overflow-y: scroll;
+    display: block;
+    border: var(--dialogue-border-color);
+    background: url(/coding_new_file_background.jpg);
     position: absolute;
     z-index: 7;
     width: 36vw;
     height: 74vh;
     border-radius: 12px;
     padding: 50px;
+}
+
+#fileName{
+    border-radius: 5px;
+    color: black;
+    outline: none;
+    border: none;
+    padding: 2.5px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    margin: 1.5em;
+    background-color: rgba(255, 255, 255, 0.062);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(180deg,rgba(60, 43, 211, 0.863),rgba(16, 1, 156, 0.863));
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(250deg,rgb(39, 29, 173), rgb(17, 1, 156));
+    border-radius: 10px;
 }
