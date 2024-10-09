@@ -498,7 +498,7 @@ input[type="text"] {
     overflow-y: scroll;
     display: block;
     border: var(--dialogue-border-color);
-    background: url(/coding_new_file_background.jpg);
+    background: url(/coding_new_file_background2.jpg);
     position: absolute;
     z-index: 7;
     width: 36vw;
