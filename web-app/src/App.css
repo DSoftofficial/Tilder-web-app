@@ -362,7 +362,7 @@ li {
     align-items: center;
     width: 36vw;
     height: 70vh;
-    background-color: rgb(23 0 59);
+    background-color: rgb(23, 0, 59);
     border-radius: 12px;
 }
 
@@ -446,7 +446,7 @@ li {
     outline: none;
     border: none;
     border-radius: 4px;
-    background: radial-gradient(rgb(124 36 213), rgb(61 0 122));
+    background: radial-gradient(rgb(124, 36, 213), rgb(61, 0, 122));
     opacity: 0.8;
     color: #fff;
     min-width: 10vw;
@@ -498,7 +498,7 @@ input[type="text"] {
     overflow-y: scroll;
     display: block;
     border: var(--dialogue-border-color);
-    background: url(/coding_new_file_background2.jpg);
+    background: url(/coding_new_file_background3.jpg);
     position: absolute;
     z-index: 7;
     width: 36vw;
