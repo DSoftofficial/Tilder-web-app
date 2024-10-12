@@ -15,7 +15,7 @@ export default function Info(props) {
                         <hr className="dropdowncontent-hr"/>
                         <p>Version: <b> {import.meta.env.VITE_REACT_APP_VERSION}</b></p>
                         <p>Date: <b>{moment().format('MMMM Do YYYY')}</b></p>
-                        <p>Licensed under <b>MIT</b> license</p>
+                        <p>Licensed under <q><b>MIT</b></q></p>
                         <p>Copyright &copy; {moment().format('YYYY')} DSoft</p>
                         <button className="btn-normal">Send Feedback</button>
                     </div>

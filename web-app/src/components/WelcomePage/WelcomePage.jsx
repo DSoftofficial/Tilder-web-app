@@ -13,9 +13,9 @@ function welcomePage(props) {
                         <p className="file-options" onClick={props.triggerNewFile}><i className="fa-solid fa-file-circle-plus"></i> New File</p>
                         <p className="file-options"><i className="fa-solid fa-folder-plus"></i> New Folder</p>
                         <p className="file-options form">
-                            <i className="fa-solid fa-file-import"> </i>
-                            <label className="add-photo-btn">Open File <input type="file" id="myfile" name="myfile" onChange={props.handleFileChange} />
-                            </label>
+                            <i className="fa-solid fa-file-import"></i>
+                            <label className="add-photo-btn" id="welcomePage_openFile" for="myfile">Open File</label>
+                            <input type="file" id="myfile" name="myfile" onChange={props.handleFileChange} />
                         </p>
                         <p className="file-options"><i className="fa-regular fa-folder-open"></i> Open Folder</p>
                         <p className="file-options"></p>

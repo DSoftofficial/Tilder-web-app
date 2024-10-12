@@ -39,6 +39,7 @@ function App(props) {
   let [code, setCode] = useState('');
   let [file, setFile] = useState();
   let [language, setLanguage] = useState('python');
+  let [formFileName, setFormFileName] = useState('');
   const [TabsWrapperDisplay, setTabsWrapperDisplay] = useState('flex');
   const toggleWelcomePageDisplay = () => {
     setDefaultPageDisplay('flex');
@@ -416,6 +417,13 @@ function App(props) {
     })
   }
 
+  const CreateNewFile = (event) => {
+    event.preventDefault();
+    setFormFileName(document.getElementById('fileName').value);
+    console.log(formFileName);
+    
+  }
+
 
   return (
     <>
@@ -430,7 +438,7 @@ function App(props) {
               <Tabs TabDisplay={TabDisplay} WelcomeTabDisplay={WelcomeTabDisplay} toggleWelcomePagedisplay={toggleWelcomePageDisplay} TabsWrapperDisplay={TabsWrapperDisplay} fileName={fileName} tabCount={tabCount} />
               <WelcomePage DimensionsWelcomePage={maincodeareaStyle} WelcomePageDisplay={WelcomePageDisplay} triggerNewFile={triggerNewFile} handleFileChange={handleFileChange} />
               <div id="mainCodeNavigation">
-                <NewFile triggerNewFile={triggerNewFile} NewFileVisibility={NewFileVisibility} />
+                <NewFile triggerNewFile={triggerNewFile} NewFileVisibility={NewFileVisibility} CreateNewFile={CreateNewFile}/>
                 <MonacoEditor monacoEditorStyle={monacoEditorStyle} code={code} language={language} MonacoEditorDisplay={MonacoEditorDisplay} />
               </div>
             </div>

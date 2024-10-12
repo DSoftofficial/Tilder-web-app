@@ -310,9 +310,10 @@ li {
     background-color: var(--tab-bg-color);
     justify-content: center;
     align-items: center;
-    width: 10vw;
+    width: auto;
     height: 5vh;
-    border-radius: 4px;
+    padding: 8px;
+    border-radius: 5px;
     margin-right: 8px;
     cursor: pointer;
 }
@@ -362,7 +363,7 @@ li {
     align-items: center;
     width: 36vw;
     height: 70vh;
-    background-color: rgb(23, 0, 59);
+    background-color: rgb(23 0 59);
     border-radius: 12px;
 }
 
@@ -446,7 +447,7 @@ li {
     outline: none;
     border: none;
     border-radius: 4px;
-    background: radial-gradient(rgb(124, 36, 213), rgb(61, 0, 122));
+    background: radial-gradient(rgb(124 36 213), rgb(61 0 122));
     opacity: 0.8;
     color: #fff;
     min-width: 10vw;
@@ -533,4 +534,76 @@ input[type="text"] {
 ::-webkit-scrollbar-thumb:hover{
     background: linear-gradient(250deg,rgb(39, 29, 173), rgb(17, 1, 156));
     border-radius: 10px;
+}
+
+input[type="checkbox"]{
+    display: flex;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+}
+
+input[type="checkbox"]::after{
+    content: "\f00c";
+    font-weight: 855;
+    font-family: "Font Awesome 6 Free";
+    font-size: 18px;
+    display: none;
+}
+
+input[type="checkbox"]:hover{
+    background-color: rgb(226, 242, 255);
+}
+
+input[type="checkbox"]:checked{
+    background-color: rgb(6, 143, 255);
+}
+
+input[type="checkbox"]:checked::after{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.file_wrapper_element{
+    display: flex;
+    margin-bottom: 1.8vh;
+}
+
+.heading_file{
+    display: inline;
+    margin-right: 4px;
+}
+
+#file_wrapper_submit_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#create_new_file{
+    font-weight: 300;
+    color: rgb(209 209 209);
+    width: 12vw;
+    height: 6vh;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(158deg, #0d03a9, #007eff);
+}
+
+#welcomePage_openFile{
+    margin-left: 3.5px;
+}
+
+#open_file_form_navbar{
+    margin: 0px;
 }
