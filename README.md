@@ -25,13 +25,13 @@ Tilder web app is a lightweight code editor that helps us to code efficiently & 
 <!--  <img alt="Tilder in action" src="https://user-images.githubusercontent.com/35271042/118224532-3842c400-b438-11eb-923d-a5f66fa6785a.png"> -->
 </p> 
 
-[Tilder](https://github.com/DSoftofficial/Tilder) combines the simplicity of a code editor with what developers need for their core edit-build-debug cycle. It provides comprehensive code editing, navigation, and understanding support along with lightweight debugging, a rich extensibility model, and lightweight integration with existing tools.It has many extensions which is built by developers for you to code efficiently.
+[Tilder](https://github.com/DSoftofficial/Tilder) combines the simplicity of a code editor with what developers need for their core edit-build-debug cycle. It provides comprehensive code editing, navigation, understanding support, lightweight debugging, a rich extensibility model, and lightweight integration with existing tools. It has many extensions built by developers to help you code efficiently.
 
-Tilder is updated monthly to it's new version with wonderful features and bug fixes. You can download it for Windows, macOS, and Linux on [Tilders's website](https://github.com/DSoftofficial/Tilder).
+Tilder is updated monthly to its new version with wonderful features and bug fixes. You can download it for Windows [Tilders's website](https://github.com/DSoftofficial/Tilder).
 
 ## Contributing
 
-There are many ways in which you can contribute in this project, for example:
+There are many ways in which you can contribute to this project, for example:
 
 * [Submit bugs and feature requests](https://github.com/dsoftofficial/tilder/issues), and help us verify as they are checked in
 * Review [source code changes](https://github.com/dsoftofficial/tilder/pulls)
