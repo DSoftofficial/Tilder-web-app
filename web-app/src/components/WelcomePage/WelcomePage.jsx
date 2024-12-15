@@ -14,7 +14,7 @@ function welcomePage(props) {
                         <p className="file-options"><i className="fa-solid fa-folder-plus"></i> New Folder</p>
                         <p className="file-options form">
                             <i className="fa-solid fa-file-import"></i>
-                            <label className="add-photo-btn" id="welcomePage_openFile" for="myfile">Open File</label>
+                            <label className="add-photo-btn" id="welcomePage_openFile" htmlFor="myfile">Open File</label>
                             <input type="file" id="myfile" name="myfile" onChange={props.handleFileChange} />
                         </p>
                         <p className="file-options"><i className="fa-regular fa-folder-open"></i> Open Folder</p>

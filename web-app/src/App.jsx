@@ -40,6 +40,39 @@ function App(props) {
   let [file, setFile] = useState();
   let [language, setLanguage] = useState('python');
   let [formFileName, setFormFileName] = useState('');
+
+  const [files, setFiles] = useState([]); // Start with an empty array for files
+  const [activeFileId, setActiveFileId] = useState(null); // Initially, no active file
+
+  const CreateNewFile = (event) => {
+    event.preventDefault();
+    console.log(document.getElementById('formFileName_id').value);
+    setFormFileName(document.getElementById('formFileName_id').value);
+    console.log(formFileName);
+    setNewFileVisibility('none');
+    const newFile = {
+      id: files.length + 1,
+      name: `${formFileName}`,
+      content: '',
+    };
+    setFiles([...files, newFile]);
+    setActiveFileId(newFile.id); // Set the new file as active
+  };
+
+  const handleTabClick = (id) => {
+    setActiveFileId(id);
+  };
+
+  const handleEditorChange = (value) => {
+    setFiles((prevFiles) =>
+      prevFiles.map((file) =>
+        file.id === activeFileId ? { ...file, content: value } : file
+      )
+    );
+  };
+
+  const activeFile = files.find((file) => file.id === activeFileId);
+
   const [TabsWrapperDisplay, setTabsWrapperDisplay] = useState('flex');
   const toggleWelcomePageDisplay = () => {
     setDefaultPageDisplay('flex');
@@ -363,45 +396,7 @@ function App(props) {
     setTabsWrapperDisplay('flex');
   }
 
-  // State to keep track of the number of divs
-  const [tabCount, setTabCount] = useState(0);
 
-  // Function to add a new div
-  const addTab = () => {
-    setTabCount(tabCount + 1);
-  };
-
-  const handleFileChange = (event) => {
-    if (event.target.files) {
-      setFile(event.target.files[0]);
-    }
-  };
-
-  useEffect(() => {
-    if (file) {
-      // monacoRef.current?.editor.setModel(monaco.editor.createModel(new TextDecoder().decode(readFileSync(file.path)), file.type));
-      triggerOpenFile()
-      addTab();
-      var reader = new FileReader();
-      reader.onload = async (e) => {
-        setCode(e.target.result);
-      };
-      reader.readAsText(file);
-      let newLanguage = 'python';
-      const extension = file.name.split('.').pop();
-      if (['css', 'html', 'py', 'dart', 'js', 'java', 'go', 'asm', 'webmanifest', 'txt', 'bat', 'bibtext', 'c', 'cpp', 'cs', 'dart', 'hsl', 'fsharp', 'clojure', 'groovy', 'ini', 'tsx', 'jsx', 'powershell'].includes(extension)) {
-        newLanguage = extension;
-      }
-      setLanguage(newLanguage);
-      console.log(extension);
-      console.log(newLanguage);
-    }
-  }, [file]);
-
-  let fileName = file // default name of the file, will be overwritten when a real file is selected
-  if (!!fileName && !!file?.name) {
-    fileName = `${file.name}`;
-  }
 
   const triggerNewFile = () => {
     setTabsWrapperDisplay('flex');
@@ -409,36 +404,44 @@ function App(props) {
     setDefaultPageDisplay('none');
     setWelcomePageDisplay('none');
     setMonacoEditorDisplay('flex');
-    setNewFileVisibility('block')
+    setNewFileVisibility('block');
     setMonacoEditorStyle({
       width: '92vw',
       height: '83.5vh',
       opacity: '0.5'
-    })
-  }
-
-  const CreateNewFile = (event) => {
-    event.preventDefault();
-    setFormFileName(document.getElementById('fileName').value);
-    console.log(formFileName);
-    
-  }
+    });
+  };
 
 
   return (
     <>
       <Info triggerInfoClose={triggerInfoClose} InfoDisplay={InfoDisplay} />
       <div id="mainProductivityArea">
-        <MenuBar toggleInfoDisplay={toggleInfoDisplay} handleFileChange={handleFileChange} triggerNewFile={triggerNewFile} />
+        <MenuBar toggleInfoDisplay={toggleInfoDisplay} triggerNewFile={triggerNewFile} />
         <div className="mainsect">
           <div className="codewrpr">
             <ReviewBar />
             <div className="maincodearea" style={maincodeareaStyle}>
               <DefaultPage DefaultPageDisplay={DefaultPageDisplay} dimensionsDefaultPage={maincodeareaStyle} />
-              <Tabs TabDisplay={TabDisplay} WelcomeTabDisplay={WelcomeTabDisplay} toggleWelcomePagedisplay={toggleWelcomePageDisplay} TabsWrapperDisplay={TabsWrapperDisplay} fileName={fileName} tabCount={tabCount} />
-              <WelcomePage DimensionsWelcomePage={maincodeareaStyle} WelcomePageDisplay={WelcomePageDisplay} triggerNewFile={triggerNewFile} handleFileChange={handleFileChange} />
+              <Tabs
+                TabDisplay={TabDisplay}
+                WelcomeTabDisplay={WelcomeTabDisplay} 
+                toggleWelcomePagedisplay={toggleWelcomePageDisplay} 
+                TabsWrapperDisplay={TabsWrapperDisplay} 
+                files={files}
+                activeFileId={activeFileId}
+                onTabClick={handleTabClick}
+                
+              />
+              {activeFile && (
+              <MonacoEditor
+                  value={activeFile.content}
+                  onChange={handleEditorChange}
+              />
+              )}
+              <WelcomePage DimensionsWelcomePage={maincodeareaStyle} WelcomePageDisplay={WelcomePageDisplay} triggerNewFile={triggerNewFile} />
               <div id="mainCodeNavigation">
-                <NewFile triggerNewFile={triggerNewFile} NewFileVisibility={NewFileVisibility} CreateNewFile={CreateNewFile}/>
+                <NewFile  NewFileVisibility={NewFileVisibility} CreateNewFile={CreateNewFile} />
                 <MonacoEditor monacoEditorStyle={monacoEditorStyle} code={code} language={language} MonacoEditorDisplay={MonacoEditorDisplay} />
               </div>
             </div>

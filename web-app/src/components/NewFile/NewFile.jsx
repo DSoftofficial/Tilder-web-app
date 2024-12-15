@@ -10,7 +10,7 @@ export default function NewFile(props) {
                         <div className="file_wrapper">
                             <div className="file_wrapper_element">
                                 <h6 className="heading_file"><label for="file_name">File Name:</label></h6>
-                                <input type="placeholder" name="file_name" id="fileName" />
+                                <input type="placeholder" name="file_name" id="formFileName_id" />
                             </div>
                             <div className="file_wrapper_element">
                                 <h6 className="heading_file"><label for="template_checkbox">Template:</label></h6>

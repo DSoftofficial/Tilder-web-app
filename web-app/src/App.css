@@ -17,6 +17,7 @@
     --fa-primary-color: rgb(25, 168, 216);
     --dialogue-color: rgb(111, 0, 201);
     --dialogue-border-color: 3px solid rgb(25, 25, 113);
+    --file-options-hover: rgb(0, 140, 255);
 }
 
 body {
@@ -449,7 +450,7 @@ li {
     border-radius: 4px;
     background: radial-gradient(rgb(124 36 213), rgb(61 0 122));
     opacity: 0.8;
-    color: #fff;
+    color: #ffffff;
     min-width: 10vw;
 }
 
@@ -470,12 +471,14 @@ input[type="text"] {
 }
 
 #quick-file-management {
+    display: inline-flex;
+    flex-direction: column;
     height: calc(83.5vh - 36.9vh);
 }
 
 .file-options:hover {
     cursor: pointer;
-    color: rgb(27, 130, 165);
+    color: var(--file-options-hover);
 }
 
 .fa-file-circle-plus {
@@ -508,7 +511,7 @@ input[type="text"] {
     padding: 50px;
 }
 
-#fileName{
+#formFileName_id {
     border-radius: 5px;
     color: black;
     outline: none;
@@ -516,27 +519,27 @@ input[type="text"] {
     padding: 2.5px;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 10px;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     margin: 1.5em;
     background-color: rgba(255, 255, 255, 0.062);
     border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb{
-    background: linear-gradient(180deg,rgba(60, 43, 211, 0.863),rgba(16, 1, 156, 0.863));
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(60, 43, 211, 0.863), rgba(16, 1, 156, 0.863));
     border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb:hover{
-    background: linear-gradient(250deg,rgb(39, 29, 173), rgb(17, 1, 156));
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(250deg, rgb(39, 29, 173), rgb(17, 1, 156));
     border-radius: 10px;
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
     display: flex;
     appearance: none;
     -webkit-appearance: none;
@@ -551,7 +554,7 @@ input[type="checkbox"]{
     border: none;
 }
 
-input[type="checkbox"]::after{
+input[type="checkbox"]::after {
     content: "\f00c";
     font-weight: 855;
     font-family: "Font Awesome 6 Free";
@@ -559,37 +562,37 @@ input[type="checkbox"]::after{
     display: none;
 }
 
-input[type="checkbox"]:hover{
+input[type="checkbox"]:hover {
     background-color: rgb(226, 242, 255);
 }
 
-input[type="checkbox"]:checked{
+input[type="checkbox"]:checked {
     background-color: rgb(6, 143, 255);
 }
 
-input[type="checkbox"]:checked::after{
+input[type="checkbox"]:checked::after {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.file_wrapper_element{
+.file_wrapper_element {
     display: flex;
     margin-bottom: 1.8vh;
 }
 
-.heading_file{
+.heading_file {
     display: inline;
     margin-right: 4px;
 }
 
-#file_wrapper_submit_button{
+#file_wrapper_submit_button {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#create_new_file{
+#create_new_file {
     font-weight: 300;
     color: rgb(209 209 209);
     width: 12vw;
@@ -600,10 +603,24 @@ input[type="checkbox"]:checked::after{
     background: linear-gradient(158deg, #0d03a9, #007eff);
 }
 
-#welcomePage_openFile{
+#welcomePage_openFile {
     margin-left: 3.5px;
 }
 
-#open_file_form_navbar{
+#open_file_form_navbar {
     margin: 0px;
+}
+
+#welcomePage_openFile:hover {
+    color: var(--file-options-hover)
+}
+
+#contributionp{
+    padding: 5px;
+    font-size: 15.2px;
+    font-weight: 100;
+}
+
+.githubicon:hover{
+    cursor: url('/githubicon.png'), auto;
 }
